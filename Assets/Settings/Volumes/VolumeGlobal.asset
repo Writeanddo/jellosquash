@@ -116,7 +116,7 @@ MonoBehaviour:
     max: 1
   numberOfBounces:
     m_OverrideState: 1
-    m_Value: 8
+    m_Value: 2
     min: 1
     max: 10
   groundTint:
@@ -196,7 +196,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   quality:
     m_OverrideState: 1
-    m_Value: 2
+    m_Value: 0
   intensity:
     m_OverrideState: 1
     m_Value: 1
@@ -239,7 +239,7 @@ MonoBehaviour:
     max: 20
   m_SampleCount:
     m_OverrideState: 1
-    m_Value: 12
+    m_Value: 4
     min: 2
 --- !u!114 &-2223948172287066284
 MonoBehaviour:
@@ -257,10 +257,10 @@ MonoBehaviour:
   m_AdvancedMode: 1
   quality:
     m_OverrideState: 1
-    m_Value: 2
+    m_Value: 1
   threshold:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 0.9
     min: 0
   intensity:
     m_OverrideState: 1
@@ -293,7 +293,7 @@ MonoBehaviour:
     m_Value: 2
   m_HighQualityPrefiltering:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0
   m_HighQualityFiltering:
     m_OverrideState: 1
     m_Value: 1
@@ -315,43 +315,11 @@ MonoBehaviour:
   - {fileID: 6640133647794636954}
   - {fileID: 2759069934644561995}
   - {fileID: 8300247594604814326}
-  - {fileID: 2112682869544596416}
   - {fileID: 5002876554434076654}
   - {fileID: -2223948172287066284}
   - {fileID: -3969488579639410846}
-  - {fileID: 747098994415714109}
   - {fileID: 4566301752631259820}
   - {fileID: -4495606900744286617}
---- !u!114 &747098994415714109
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a6b00fcf518bb94a90b408492e07b44, type: 3}
-  m_Name: FilmGrain
-  m_EditorClassIdentifier: 
-  active: 1
-  m_AdvancedMode: 0
-  type:
-    m_OverrideState: 1
-    m_Value: 0
-  intensity:
-    m_OverrideState: 1
-    m_Value: 0.2
-    min: 0
-    max: 1
-  response:
-    m_OverrideState: 1
-    m_Value: 0.8
-    min: 0
-    max: 1
-  texture:
-    m_OverrideState: 0
-    m_Value: {fileID: 0}
 --- !u!114 &1359070828411649799
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -375,72 +343,6 @@ MonoBehaviour:
   fogType:
     m_OverrideState: 1
     m_Value: 0
---- !u!114 &2112682869544596416
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56b145d2b9ee1ac4f846968484e7485a, type: 3}
-  m_Name: ContactShadows
-  m_EditorClassIdentifier: 
-  active: 1
-  m_AdvancedMode: 0
-  quality:
-    m_OverrideState: 1
-    m_Value: 2
-  enable:
-    m_OverrideState: 1
-    m_Value: 1
-  length:
-    m_OverrideState: 1
-    m_Value: 0.1
-    min: 0
-    max: 1
-  opacity:
-    m_OverrideState: 0
-    m_Value: 1
-    min: 0
-    max: 1
-  distanceScaleFactor:
-    m_OverrideState: 1
-    m_Value: 0.5
-    min: 0
-    max: 1
-  maxDistance:
-    m_OverrideState: 1
-    m_Value: 100
-    min: 0
-  minDistance:
-    m_OverrideState: 1
-    m_Value: 1
-    min: 0
-  fadeDistance:
-    m_OverrideState: 1
-    m_Value: 10
-    min: 0
-  fadeInDistance:
-    m_OverrideState: 1
-    m_Value: 2
-    min: 0
-  rayBias:
-    m_OverrideState: 0
-    m_Value: 0.2
-    min: 0
-    max: 1
-  thicknessScale:
-    m_OverrideState: 1
-    m_Value: 0.1
-    min: 0.02
-    max: 1
-  m_SampleCount:
-    m_OverrideState: 1
-    m_Value: 12
-    min: 4
-    max: 64
 --- !u!114 &2759069934644561995
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -575,7 +477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e17fad69ea181b4483974138b566975, type: 3}
   m_Name: ScreenSpaceRefraction
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   m_AdvancedMode: 0
   screenFadeDistance:
     m_OverrideState: 1
@@ -598,7 +500,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   quality:
     m_OverrideState: 1
-    m_Value: 2
+    m_Value: 3
   rayTracing:
     m_OverrideState: 0
     m_Value: 0
@@ -642,7 +544,7 @@ MonoBehaviour:
       m_Bits: 4294967295
   m_StepCount:
     m_OverrideState: 1
-    m_Value: 6
+    m_Value: 4
     min: 2
     max: 32
   m_FullResolution:
@@ -650,12 +552,12 @@ MonoBehaviour:
     m_Value: 0
   m_MaximumRadiusInPixels:
     m_OverrideState: 1
-    m_Value: 40
+    m_Value: 32
     min: 16
     max: 256
   m_BilateralUpsample:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0
   m_DirectionCount:
     m_OverrideState: 1
     m_Value: 2
@@ -663,11 +565,11 @@ MonoBehaviour:
     max: 6
   m_RayLength:
     m_OverrideState: 1
-    m_Value: 20
+    m_Value: 3
     min: 0
   m_SampleCount:
     m_OverrideState: 1
-    m_Value: 8
+    m_Value: 2
     min: 1
     max: 64
   m_Denoise:
@@ -675,7 +577,7 @@ MonoBehaviour:
     m_Value: 1
   m_DenoiserRadius:
     m_OverrideState: 1
-    m_Value: 0.65
+    m_Value: 0.5
     min: 0.001
     max: 1
 --- !u!114 &6640133647794636954
@@ -912,13 +814,13 @@ MonoBehaviour:
     min: 0
     max: 1
   cascadeShadowSplitCount:
-    m_OverrideState: 0
-    m_Value: 4
+    m_OverrideState: 1
+    m_Value: 2
     min: 1
     max: 4
   cascadeShadowSplit0:
     m_OverrideState: 1
-    m_Value: 0.046875
+    m_Value: 0.43363458
   cascadeShadowSplit1:
     m_OverrideState: 1
     m_Value: 0.140625
