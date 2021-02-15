@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cd64955a8188e814890fd9572b0670b9
+guid: ed5c6b85e7c7a794890efaa54a564647
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material
-    second: {fileID: 2100000, guid: d0611462bbe9eec448738a82b67b685a, type: 2}
+      name: MetalWireframe
+    second: {fileID: 2100000, guid: 9bf4ded892197cf49aa5a8893118674e, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
