@@ -1,24 +1,25 @@
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public partial class Player
 {
-
+  [Header("Movement")]
   public CharacterController controller;
-  public float speed = 6.0f;
+  public float speed = 40.0f;
 
   public Transform cameraTransform;
   public float turnSmoothTime = 0.1f;
   private float _turnSmoothVelocity;
 
   private Vector3 _velocity;
-  public float gravity = -9.81f;
+  public float gravity = -49.05f;
 
   public Transform groundCheck;
-  public float groundDistance = 0.4f;
-  public float jumpHeight;
+  public float groundDistance = 0.7f;
+  public float jumpHeight = 7.0f;
   private bool _isGrounded;
+  public AnimationCurve jumpAnimation;
 
-  void Update()
+  void MovementUpdate()
   {
     Cursor.lockState = CursorLockMode.Locked;
     _isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance);
