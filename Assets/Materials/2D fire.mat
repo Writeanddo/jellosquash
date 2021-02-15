@@ -7,22 +7,23 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shader Graphs_FireEffect
+  m_Name: 2D fire
   m_Shader: {fileID: -6465566751694194690, guid: 435fc18bfa139814197345e2b93726ce, type: 3}
-  m_ShaderKeywords: _DISABLE_SSR_TRANSPARENT _ENABLE_FOG_ON_TRANSPARENT _SURFACE_TYPE_TRANSPARENT
+  m_ShaderKeywords: _DISABLE_SSR_TRANSPARENT _DOUBLESIDED_ON _ENABLE_FOG_ON_TRANSPARENT
+    _SURFACE_TYPE_TRANSPARENT
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
+  m_DoubleSidedGI: 1
+  m_CustomRenderQueue: 3400
   stringTagMap:
     MotionVector: User
     RenderType: Transparent
   disabledShaderPasses:
-  - MOTIONVECTORS
-  - TransparentDepthPrepass
+  - RayTracingPrepass
   - TransparentDepthPostpass
   - TransparentBackface
-  - RayTracingPrepass
+  - TransparentDepthPrepass
+  - MOTIONVECTORS
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -44,31 +45,31 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - Vector1_0657a7d194aa4e758aaa63e11c46ca2a: 2
-    - Vector1_7d5c1e366132490586fbb2e82ad62e62: 1
-    - Vector1_c152aadff9f94b6cb71c968c3addf539: 0.391
-    - Vector1_e6e7140d06c94290a8137743501ccb40: 0.354
-    - Vector1_f261ab7fb3664f4c87d64f0b51400517: 0
+    - Vector1_7d5c1e366132490586fbb2e82ad62e62: -0.5
+    - Vector1_c152aadff9f94b6cb71c968c3addf539: 0.1
+    - Vector1_e6e7140d06c94290a8137743501ccb40: -0.5
+    - Vector1_f261ab7fb3664f4c87d64f0b51400517: 7.4
     - _AddPrecomputedVelocity: 0
     - _AlphaCutoffEnable: 0
-    - _AlphaDstBlend: 10
-    - _AlphaSrcBlend: 1
+    - _AlphaDstBlend: 1
+    - _AlphaSrcBlend: 0
     - _AlphaToMask: 0
     - _AlphaToMaskInspectorValue: 0
-    - _BlendMode: 0
-    - _CullMode: 2
-    - _CullModeForward: 2
+    - _BlendMode: 1
+    - _CullMode: 0
+    - _CullModeForward: 0
     - _DepthOffsetEnable: 0
-    - _DoubleSidedEnable: 0
-    - _DoubleSidedNormalMode: 2
-    - _DstBlend: 10
-    - _EnableBlendModePreserveSpecularLighting: 1
+    - _DoubleSidedEnable: 1
+    - _DoubleSidedNormalMode: 1
+    - _DstBlend: 1
+    - _EnableBlendModePreserveSpecularLighting: 0
     - _EnableFogOnTransparent: 1
     - _OpaqueCullMode: 2
     - _RayTracing: 0
     - _ReceivesSSR: 1
     - _ReceivesSSRTransparent: 0
     - _RefractionModel: 0
-    - _RenderQueueType: 4
+    - _RenderQueueType: 5
     - _RequireSplitLighting: 0
     - _SrcBlend: 1
     - _StencilRef: 0
@@ -96,12 +97,12 @@ Material:
     - _ZTestTransparent: 4
     - _ZWrite: 0
     m_Colors:
-    - Color_d35e2b138da2489bb414be712c3f53ae: {r: 25.289785, g: 18.50773, b: 0, a: 0}
+    - Color_d35e2b138da2489bb414be712c3f53ae: {r: 7.999999, g: 2.5211265, b: 0, a: 0}
     - Vector2_7707b1a4e7374843882dd18836731bea: {r: 1, g: -1, b: 0, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
---- !u!114 &976868195482811739
+--- !u!114 &1015805782866681524
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
