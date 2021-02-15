@@ -38,11 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-<<<<<<< HEAD:Assets/Scenes/Main.unity
   m_IndirectSpecularColor: {r: 3061.837, g: 2045.9219, b: 1749.0098, a: 1}
-=======
-  m_IndirectSpecularColor: {r: 667.51886, g: 638.8911, b: 565.0303, a: 1}
->>>>>>> 086df195cfd6f41bf2cff917d66952399ccb28b3:Assets/Scenes/SampleScene.unity
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1440,11 +1436,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-<<<<<<< HEAD:Assets/Scenes/Main.unity
   m_RootOrder: 7
-=======
-  m_RootOrder: 8
->>>>>>> 086df195cfd6f41bf2cff917d66952399ccb28b3:Assets/Scenes/SampleScene.unity
   m_LocalEulerAnglesHint: {x: 30, y: 5, z: 0}
 --- !u!114 &1918817314
 MonoBehaviour:
@@ -1612,13 +1604,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-<<<<<<< HEAD:Assets/Scenes/Main.unity
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 27.085, y: 135, z: 0}
-=======
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 10, y: 135, z: 0}
->>>>>>> 086df195cfd6f41bf2cff917d66952399ccb28b3:Assets/Scenes/SampleScene.unity
 --- !u!114 &2035111237
 MonoBehaviour:
   m_ObjectHideFlags: 0
