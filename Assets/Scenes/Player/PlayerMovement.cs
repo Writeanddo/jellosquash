@@ -5,14 +5,24 @@ public class PlayerMovement : MonoBehaviour
 
   public CharacterController controller;
   public float speed = 6.0f;
+
+  public Transform cameraTransform;
   public float turnSmoothTime = 0.1f;
   private float _turnSmoothVelocity;
 
-  public Transform cameraTransform;
+  private Vector3 _velocity;
+  public float gravity = -9.81f;
+
+  public Transform groundCheck;
+  public float groundDistance = 0.4f;
+  public float jumpHeight;
+  private bool _isGrounded;
 
   void Update()
   {
     Cursor.lockState = CursorLockMode.Locked;
+    _isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance);
+    if (_isGrounded && _velocity.y < 0) _velocity.y = 0.1f * gravity;
 
     float horizontal = Input.GetAxisRaw("Horizontal");
     float vertical = Input.GetAxisRaw("Vertical");
@@ -28,5 +38,15 @@ public class PlayerMovement : MonoBehaviour
       Vector3 moveDirection = Quaternion.Euler(0.0f, targetAngle, 0.0f) * Vector3.forward;
       controller.Move(moveDirection.normalized * speed * Time.deltaTime);
     }
+
+    if (Input.GetButtonDown("Jump") && _isGrounded)
+    {
+      print(Mathf.Sqrt(jumpHeight * -2.0f * gravity));
+      _velocity.y = Mathf.Sqrt(jumpHeight * -2.0f * gravity);
+      print(_velocity.y);
+    }
+
+    _velocity.y += gravity * Time.deltaTime;
+      controller.Move(_velocity * Time.deltaTime);
   }
 }
