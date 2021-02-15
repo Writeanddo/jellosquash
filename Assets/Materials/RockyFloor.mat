@@ -94,7 +94,7 @@ Material:
     - _ZTestTransparent: 4
     - _ZWrite: 1
     m_Colors:
-    - Color_FB6A47F7: {r: 0.3962264, g: 0.15339656, b: 0.0093449615, a: 1}
+    - Color_FB6A47F7: {r: 0.15205589, g: 0.39481696, b: 0.4811321, a: 1}
     - Vector3_23B3A49B: {r: 0.006, g: 0.2, b: 0.02, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
