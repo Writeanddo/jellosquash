@@ -95,7 +95,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - Color_FB6A47F7: {r: 0.3962264, g: 0.15339656, b: 0.0093449615, a: 1}
-    - Vector3_23B3A49B: {r: 0.006, g: 0.3, b: 0.02, a: 0}
+    - Vector3_23B3A49B: {r: 0.006, g: 0.2, b: 0.02, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
