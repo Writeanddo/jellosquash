@@ -51,6 +51,9 @@ public partial class Player
     if (Input.GetButtonDown("Jump") && _isGrounded)
       _velocity.y = Mathf.Sqrt(jumpHeight * -2.0f * gravity);
 
+    if (Input.GetButtonDown("Jump") && !_isGrounded)
+      _velocity.y = -Mathf.Sqrt(jumpHeight * -4.0f * gravity);
+
     _velocity.y += gravity * Time.deltaTime;
       controller.Move(_velocity * Time.deltaTime);
   }
