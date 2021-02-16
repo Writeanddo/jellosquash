@@ -14,7 +14,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!135 &8256411143113617069
 SphereCollider:
@@ -29,6 +29,21 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.97977835
   m_Center: {x: 0, y: 0.8198774, z: -0.00005352497}
+--- !u!114 &4488874101066910291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 188440627323341929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e44abac79119284d84b968812815317, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 3420959229131796551}
+  sphereCollider: {fileID: 8256411143113617069}
+  stopThreshold: 0.2
 --- !u!1001 &1034719681347399992
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42,27 +57,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2fa8f41292b135545ae5db6dc95f7000, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2fa8f41292b135545ae5db6dc95f7000, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2fa8f41292b135545ae5db6dc95f7000, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2fa8f41292b135545ae5db6dc95f7000, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 79
+      value: 20.491343
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2fa8f41292b135545ae5db6dc95f7000, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 115
+      value: 9.825272
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2fa8f41292b135545ae5db6dc95f7000, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 12
+      value: 17.368492
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2fa8f41292b135545ae5db6dc95f7000, type: 3}
       propertyPath: m_LocalRotation.w
@@ -101,8 +116,12 @@ PrefabInstance:
       value: PickupJelly
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2fa8f41292b135545ae5db6dc95f7000, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2fa8f41292b135545ae5db6dc95f7000, type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fa8f41292b135545ae5db6dc95f7000, type: 3}

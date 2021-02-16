@@ -13,16 +13,28 @@ public partial class Player
   private Vector3 _velocity;
   public float gravity = -49.05f;
 
-  public Transform groundCheck;
+  public Transform[] groundChecks;
   public float groundDistance = 0.7f;
   public float jumpHeight = 7.0f;
   private bool _isGrounded;
   public AnimationCurve jumpAnimation;
 
-  void MovementUpdate()
+  public GameObject jellyPrefab;
+  public float spawnOffset = 0.1f;
+  public float throwVelocity = 1.0f;
+
+  private void MovementUpdate()
   {
     Cursor.lockState = CursorLockMode.Locked;
-    _isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance);
+    foreach (Transform groundCheck in groundChecks)
+    {
+      if (Physics.CheckSphere(groundCheck.position, groundDistance))
+      {
+        _isGrounded = true;
+        break;
+      }
+      _isGrounded = false;
+    }
     if (_isGrounded && _velocity.y < 0) _velocity.y = 0.1f * gravity;
 
     float horizontal = Input.GetAxisRaw("Horizontal");
@@ -42,6 +54,18 @@ public partial class Player
 
     if (Input.GetButtonDown("Jump") && _isGrounded)
       _velocity.y = Mathf.Sqrt(jumpHeight * -2.0f * gravity);
+
+    if (Input.GetButtonDown("Jump") && !_isGrounded)
+    {
+      _velocity.y = -Mathf.Sqrt(jumpHeight * -4.0f * gravity);
+      GameObject littleJelly = Instantiate(jellyPrefab, transform.position + transform.forward*transform.localScale.z + transform.forward*spawnOffset, transform.rotation);
+      Rigidbody littleJellyRB = littleJelly.GetComponent<Rigidbody>();
+      littleJellyRB.isKinematic = false;
+      littleJellyRB.velocity = transform.forward*throwVelocity;
+
+      SphereCollider littleJellySC = littleJelly.GetComponent<SphereCollider>();
+      littleJellySC.isTrigger = false;
+    }
 
     _velocity.y += gravity * Time.deltaTime;
       controller.Move(_velocity * Time.deltaTime);
