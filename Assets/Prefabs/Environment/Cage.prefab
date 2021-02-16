@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4273677665685848063}
   - component: {fileID: 4273677665685848061}
   - component: {fileID: 4273677665685848060}
+  - component: {fileID: 5236945663483769338}
   m_Layer: 6
   m_Name: CageDoor
   m_TagString: Untagged
@@ -81,6 +82,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5236945663483769338
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4273677665685848062}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.017808627, y: 0.6005045, z: 0.5864802}
+  m_Center: {x: 0.008190084, y: -0.018218264, z: -0.28605083}
 --- !u!1 &4273677666781756752
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,6 +138,7 @@ GameObject:
   - component: {fileID: 4273677666856171809}
   - component: {fileID: 4273677666856171823}
   - component: {fileID: 4273677666856171822}
+  - component: {fileID: 1854975241360685484}
   m_Layer: 6
   m_Name: Cage
   m_TagString: Untagged
@@ -194,3 +209,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1854975241360685484
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4273677666856171808}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8634338456207152865, guid: cd64955a8188e814890fd9572b0670b9, type: 3}
