@@ -20,6 +20,8 @@ public partial class Player
   public AnimationCurve jumpAnimation;
 
   public GameObject jellyPrefab;
+  public float spawnOffset = 0.1f;
+  public float throwVelocity = 1.0f;
 
   private void MovementUpdate()
   {
@@ -54,7 +56,16 @@ public partial class Player
       _velocity.y = Mathf.Sqrt(jumpHeight * -2.0f * gravity);
 
     if (Input.GetButtonDown("Jump") && !_isGrounded)
+    {
       _velocity.y = -Mathf.Sqrt(jumpHeight * -4.0f * gravity);
+      GameObject littleJelly = Instantiate(jellyPrefab, transform.position + transform.forward*transform.localScale.z + transform.forward*spawnOffset, transform.rotation);
+      Rigidbody littleJellyRB = littleJelly.GetComponent<Rigidbody>();
+      littleJellyRB.isKinematic = false;
+      littleJellyRB.velocity = transform.forward*throwVelocity;
+
+      SphereCollider littleJellySC = littleJelly.GetComponent<SphereCollider>();
+      littleJellySC.isTrigger = false;
+    }
 
     _velocity.y += gravity * Time.deltaTime;
       controller.Move(_velocity * Time.deltaTime);

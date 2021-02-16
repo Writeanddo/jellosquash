@@ -1603,7 +1603,7 @@
     },
     "m_Name": "Wobbliness",
     "m_DefaultReferenceName": "Vector1_29e05df4b7fd4f238cc87990da69ca61",
-    "m_OverrideReferenceName": "",
+    "m_OverrideReferenceName": "_Wobbliness",
     "m_GeneratePropertyBlock": true,
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,

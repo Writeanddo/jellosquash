@@ -205,6 +205,8 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   jellyPrefab: {fileID: 188440627323341929, guid: fa50e3e47a72b2f4f9902fa47068a37b, type: 3}
+  spawnOffset: 1
+  throwVelocity: 1
   pickupLayer:
     serializedVersion: 2
     m_Bits: 128
