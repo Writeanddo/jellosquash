@@ -13,7 +13,7 @@ public partial class Player
   private Vector3 _velocity;
   public float gravity = -49.05f;
 
-  public Transform groundCheck;
+  public Transform[] groundChecks;
   public float groundDistance = 0.7f;
   public float jumpHeight = 7.0f;
   private bool _isGrounded;
@@ -22,7 +22,15 @@ public partial class Player
   void MovementUpdate()
   {
     Cursor.lockState = CursorLockMode.Locked;
-    _isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance);
+    foreach (Transform groundCheck in groundChecks)
+    {
+      if (Physics.CheckSphere(groundCheck.position, groundDistance))
+      {
+        _isGrounded = true;
+        break;
+      }
+      _isGrounded = false;
+    }
     if (_isGrounded && _velocity.y < 0) _velocity.y = 0.1f * gravity;
 
     float horizontal = Input.GetAxisRaw("Horizontal");

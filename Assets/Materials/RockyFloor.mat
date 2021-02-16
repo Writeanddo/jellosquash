@@ -40,10 +40,10 @@ Material:
     m_Floats:
     - Vector1_16518DDD: 20
     - Vector1_2BBB4936: 300
-    - Vector1_57836BC3: 0
+    - Vector1_57836BC3: 0.3
     - Vector1_6320EFCE: 0.5
     - Vector1_76D89C78: 2
-    - Vector1_90C79D5E: 0.1
+    - Vector1_90C79D5E: 0.001
     - Vector1_9FDA709D: 100
     - Vector1_D1CBEA59: 2
     - _AddPrecomputedVelocity: 0
@@ -95,7 +95,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - Color_FB6A47F7: {r: 0.15205589, g: 0.39481696, b: 0.4811321, a: 1}
-    - Vector3_23B3A49B: {r: 0.006, g: 0.2, b: 0.02, a: 0}
+    - Vector3_23B3A49B: {r: 0, g: 0, b: 0, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []

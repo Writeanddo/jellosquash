@@ -38,9 +38,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_0c2a332ae558444e9bff75323528cfbc: 0
-    - Vector1_98f8aa892117476c93209532db789123: 0
-    - Vector1_e3643e65e9ab485da002bc792570d754: 1.5
+    - Vector1_0c2a332ae558444e9bff75323528cfbc: 0.4
+    - Vector1_98f8aa892117476c93209532db789123: 0.3
+    - Vector1_e3643e65e9ab485da002bc792570d754: 1.9
     - _AddPrecomputedVelocity: 0
     - _AlphaCutoffEnable: 0
     - _AlphaDstBlend: 0
@@ -89,7 +89,7 @@ Material:
     - _ZTestTransparent: 4
     - _ZWrite: 1
     m_Colors:
-    - Color_f509763b7c184dd3b943634458143d15: {r: 1.1058824, g: 0.72156864, b: 0.78431374, a: 1}
+    - Color_f509763b7c184dd3b943634458143d15: {r: 0.15636924, g: 4.735751, b: 1.7032617, a: 1}
     - Vector2_7081dfb21cd148f9a581929f3ce87c93: {r: 0.1, g: 1, b: 0, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
