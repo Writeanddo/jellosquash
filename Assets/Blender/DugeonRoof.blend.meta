@@ -1,14 +1,9 @@
 fileFormatVersion: 2
-guid: 7ba35404ee5d5c04183168eb5717a100
+guid: 7b393915efd9de44d8db835d88a449e6
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: MetalDoor
-    second: {fileID: 2100000, guid: 9bf4ded892197cf49aa5a8893118674e, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
