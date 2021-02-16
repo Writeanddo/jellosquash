@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7411688428580468241}
   - component: {fileID: 7411688428580468240}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: Flame Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
