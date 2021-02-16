@@ -19,7 +19,9 @@ public partial class Player
   private bool _isGrounded;
   public AnimationCurve jumpAnimation;
 
-  void MovementUpdate()
+  public GameObject jellyPrefab;
+
+  private void MovementUpdate()
   {
     Cursor.lockState = CursorLockMode.Locked;
     foreach (Transform groundCheck in groundChecks)
