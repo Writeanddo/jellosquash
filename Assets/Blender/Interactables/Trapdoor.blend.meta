@@ -9,6 +9,16 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: MetalDoor
     second: {fileID: 2100000, guid: 9bf4ded892197cf49aa5a8893118674e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MetalFrame
+    second: {fileID: 2100000, guid: 9bf4ded892197cf49aa5a8893118674e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WoodDoor
+    second: {fileID: 2100000, guid: 0351d80fbb9159d4086f9202ff5d9169, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

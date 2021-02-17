@@ -55,16 +55,23 @@ public partial class Player
     if (Input.GetButtonDown("Jump") && _isGrounded)
       _velocity.y = Mathf.Sqrt(jumpHeight * -2.0f * gravity);
 
-    if (Input.GetButtonDown("Jump") && !_isGrounded)
+    if (Input.GetButtonDown("Fire1") && !_isGrounded)
     {
       _velocity.y = -Mathf.Sqrt(jumpHeight * -4.0f * gravity);
-      GameObject littleJelly = Instantiate(jellyPrefab, transform.position + transform.forward*transform.localScale.z + transform.forward*spawnOffset, transform.rotation);
-      Rigidbody littleJellyRB = littleJelly.GetComponent<Rigidbody>();
-      littleJellyRB.isKinematic = false;
-      littleJellyRB.velocity = transform.forward*throwVelocity;
+      if (transform.localScale.y > 1.0f)
+      {
+        GameObject littleJelly = Instantiate(jellyPrefab, transform.position + transform.forward*transform.localScale.z + transform.forward*spawnOffset, transform.rotation);
+        littleJelly.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+        Rigidbody littleJellyRB = littleJelly.GetComponent<Rigidbody>();
+        littleJellyRB.isKinematic = false;
+        littleJellyRB.velocity = transform.forward*throwVelocity;
 
-      SphereCollider littleJellySC = littleJelly.GetComponent<SphereCollider>();
-      littleJellySC.isTrigger = false;
+        SphereCollider littleJellySC = littleJelly.GetComponent<SphereCollider>();
+        littleJellySC.isTrigger = false;
+
+        _localScale -= new Vector3(0.5f, 0.5f, 0.5f);
+        _animationTime = 0.0f;
+      }
     }
 
     _velocity.y += gravity * Time.deltaTime;

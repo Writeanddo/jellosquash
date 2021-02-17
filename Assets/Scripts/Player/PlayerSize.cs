@@ -8,21 +8,21 @@ public partial class Player : MonoBehaviour
   public AnimationCurve sizeChangeAnimation;
   public float sizeChangeDuration = 1.0f;
 
-  private float animationTime;
+  private float _animationTime;
   private Vector3 _localScale;
 
   private void SizeInit()
   {
-    animationTime = sizeChangeDuration;
+    _animationTime = sizeChangeDuration;
     _localScale = transform.localScale;
   }
 
   private void SizeUpdate()
   {
-    if (animationTime < sizeChangeDuration)
+    if (_animationTime < sizeChangeDuration)
     {
-      transform.localScale = Vector3.Lerp(transform.localScale, _localScale, sizeChangeAnimation.Evaluate(animationTime/sizeChangeDuration));
-      animationTime += Time.deltaTime;
+      transform.localScale = Vector3.Lerp(transform.localScale, _localScale, sizeChangeAnimation.Evaluate(_animationTime/sizeChangeDuration));
+      _animationTime += Time.deltaTime;
     }
   }
 
@@ -31,7 +31,7 @@ public partial class Player : MonoBehaviour
     if ((pickupLayer & 1 << collider.gameObject.layer) == 1 << collider.gameObject.layer)
     {
       _localScale += collider.transform.localScale;
-      animationTime = 0.0f;
+      _animationTime = 0.0f;
       Destroy(collider.gameObject);
     }
   }

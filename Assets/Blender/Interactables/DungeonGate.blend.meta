@@ -3,7 +3,12 @@ guid: 1f04d16c3ceb3d645b5613a3d5808f98
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DungeonGate
+    second: {fileID: 2100000, guid: 51f2a459747104f41b99c05e7629ba9d, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
