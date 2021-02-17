@@ -1,9 +1,19 @@
 fileFormatVersion: 2
-guid: 2fa74f769788008428cd7ca6742ff995
+guid: 818360cbaed65a1428de38fe5c811f71
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PressurePlate
+    second: {fileID: 2100000, guid: e985b00f05b3f2d448b3b23ee8e18d28, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PressurePlateBase
+    second: {fileID: 2100000, guid: 101c609d80ed6a440981469bd48411a6, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
