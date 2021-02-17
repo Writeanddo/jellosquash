@@ -160,7 +160,7 @@ MonoBehaviour:
   - {fileID: 2782736828787555260}
   - {fileID: 3984776137801427221}
   - {fileID: 1366280212395409496}
-  groundDistance: 0.3
+  groundDistance: 0.2
   jumpHeight: 7
   jumpAnimation:
     serializedVersion: 2
@@ -322,7 +322,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 13d14ee666d66f64080780413d6760ff, type: 2}
     - target: {fileID: 919132149155446097, guid: 2fa8f41292b135545ae5db6dc95f7000, type: 3}
       propertyPath: m_Name
-      value: Jelly
+      value: Jelly Variant
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2fa8f41292b135545ae5db6dc95f7000, type: 3}
       propertyPath: m_Layer

@@ -11,6 +11,8 @@ public class PressurePlate : MonoBehaviour
   public Vector3 positionOffset = new Vector3(0.0f, -1.0f, 0.0f);
   public LayerMask acceptedLayer;
 
+  public BoxCollider disableCollider;
+
   [ColorUsage(false, true)]
   public Color untriggeredColor;
   [ColorUsage(false, true)]
@@ -60,6 +62,7 @@ public class PressurePlate : MonoBehaviour
     if ((acceptedLayer & 1 << collider.gameObject.layer) == 1 << collider.gameObject.layer && !_trigger)
     {
       _trigger = true;
+      disableCollider.enabled = false;
     }
   }
 
@@ -68,6 +71,7 @@ public class PressurePlate : MonoBehaviour
     if ((acceptedLayer & 1 << collider.gameObject.layer) == 1 << collider.gameObject.layer && _trigger)
     {
       _trigger = false;
+      disableCollider.enabled = true;
     }
   }
 }

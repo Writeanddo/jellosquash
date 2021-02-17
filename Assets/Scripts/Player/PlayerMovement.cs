@@ -23,6 +23,8 @@ public partial class Player
   public float spawnOffset = 0.1f;
   public float throwVelocity = 1.0f;
 
+  public bool attack = false;
+
   private void MovementUpdate()
   {
     Cursor.lockState = CursorLockMode.Locked;
@@ -53,10 +55,14 @@ public partial class Player
     }
 
     if (Input.GetButtonDown("Jump") && _isGrounded)
+    {
+      attack = false;
       _velocity.y = Mathf.Sqrt(jumpHeight * -2.0f * gravity);
+    }
 
     if (Input.GetButtonDown("Fire1") && !_isGrounded)
     {
+      attack = true;
       _velocity.y = -Mathf.Sqrt(jumpHeight * -4.0f * gravity);
       if (transform.localScale.y > 1.0f)
       {
