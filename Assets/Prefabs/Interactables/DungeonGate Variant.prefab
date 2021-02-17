@@ -26,19 +26,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f04d16c3ceb3d645b5613a3d5808f98, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -23.33
+      value: 28.371256
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f04d16c3ceb3d645b5613a3d5808f98, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 105.85
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f04d16c3ceb3d645b5613a3d5808f98, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -39.24881
+      value: 31.019325
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f04d16c3ceb3d645b5613a3d5808f98, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071067
+      value: 0.70710677
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f04d16c3ceb3d645b5613a3d5808f98, type: 3}
       propertyPath: m_LocalRotation.x
@@ -46,7 +46,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f04d16c3ceb3d645b5613a3d5808f98, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f04d16c3ceb3d645b5613a3d5808f98, type: 3}
       propertyPath: m_LocalRotation.z
@@ -67,6 +67,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 1f04d16c3ceb3d645b5613a3d5808f98, type: 3}
       propertyPath: m_Name
       value: DungeonGate Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1f04d16c3ceb3d645b5613a3d5808f98, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f04d16c3ceb3d645b5613a3d5808f98, type: 3}
