@@ -3,7 +3,12 @@ guid: fb3cac2e8dbe3bf4e85bd79c7a1d827a
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: VaseMarble
+    second: {fileID: 2100000, guid: 6a5c2c7b0669e7b4680cde21e5a04228, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
