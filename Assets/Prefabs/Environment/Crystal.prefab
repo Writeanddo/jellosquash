@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3156055571286685625}
   - component: {fileID: 3156055571286685626}
   - component: {fileID: 3156055571286685627}
-  - component: {fileID: 2734215444523805786}
+  - component: {fileID: 2597133685678864780}
   m_Layer: 0
   m_Name: Crystal
   m_TagString: Untagged
@@ -82,7 +82,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &2734215444523805786
+--- !u!64 &2597133685678864780
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
