@@ -4,6 +4,7 @@ public partial class Player : MonoBehaviour
 {
   void Start()
   {
+    MovementInit();
     SizeInit();
   }
 
