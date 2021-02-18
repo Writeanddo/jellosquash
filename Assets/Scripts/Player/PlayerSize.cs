@@ -42,7 +42,7 @@ public partial class Player : MonoBehaviour
       {
         Enemy enemy = collider.transform.parent.GetComponent<Enemy>();
         if (!enemy.dead) enemy.die = true;
-        _localScale += collider.transform.parent.localScale;
+        _localScale += new Vector3(0.5f, 0.5f, 0.5f);
       }
     }
   }
