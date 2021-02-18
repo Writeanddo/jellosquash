@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2565.126, g: 1740.2715, b: 1480.7012, a: 1}
+  m_IndirectSpecularColor: {r: 2565.211, g: 1740.9531, b: 1482.0469, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6163,7 +6163,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1918817309}
-  m_LocalRotation: {x: 0.16003184, y: -0.09108044, z: 0.014831025, w: 0.982789}
+  m_LocalRotation: {x: 0.16003184, y: -0.091080524, z: 0.01483104, w: 0.982789}
   m_LocalPosition: {x: 65.67545, y: 108, z: -63.659378}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -6772,15 +6772,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3066604839038607227, guid: 40dc031698349574c917a31edfb1a559, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.10529044
+      value: -0.10529046
       objectReference: {fileID: 0}
     - target: {fileID: 3066604839038607227, guid: 40dc031698349574c917a31edfb1a559, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.13518363
+      value: 0.1351836
       objectReference: {fileID: 0}
     - target: {fileID: 3066604839038607227, guid: 40dc031698349574c917a31edfb1a559, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.07162444
+      value: -0.07162442
       objectReference: {fileID: 0}
     - target: {fileID: 3066604839158534853, guid: 40dc031698349574c917a31edfb1a559, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6840,11 +6840,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3066604840088316976, guid: 40dc031698349574c917a31edfb1a559, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.1371925
+      value: 0.13719244
       objectReference: {fileID: 0}
     - target: {fileID: 3066604840088316976, guid: 40dc031698349574c917a31edfb1a559, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.067697115
+      value: -0.06769709
       objectReference: {fileID: 0}
     - target: {fileID: 3066604840151612644, guid: 40dc031698349574c917a31edfb1a559, type: 3}
       propertyPath: m_Name
