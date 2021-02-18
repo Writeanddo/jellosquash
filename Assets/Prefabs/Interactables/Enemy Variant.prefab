@@ -75,6 +75,9 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   squashedDuration: 0.4
+  item: {fileID: 0}
+  offset: 2
+  rotationSpeed: 100
 --- !u!195 &5945740317650983464
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -84,9 +87,9 @@ NavMeshAgent:
   m_GameObject: {fileID: 4911416983783220597}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.97977835
-  m_Speed: 35
-  m_Acceleration: 20
+  m_Radius: 1.4
+  m_Speed: 20
+  m_Acceleration: 10
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 10

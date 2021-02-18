@@ -11,7 +11,10 @@ public class BgMusic : MonoBehaviour
   [Header("0 - 1")]
   public float fadeInVolume;
   public float fadeOutVolume;
+
+
   void Awake() => DontDestroyOnLoad(this.gameObject);
+
   void Start()
   {
     // game launch fade in

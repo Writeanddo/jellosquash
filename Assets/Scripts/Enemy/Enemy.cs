@@ -12,29 +12,50 @@ public class Enemy : MonoBehaviour
   public AnimationCurve squashedCurve;
   public float squashedDuration;
 
+  public GameObject item;
+  public float offset = 2.0f;
+  public float followSpeed = 10.0f;
+  public float rotationSpeed = 10.0f;
+
   private Transform _target;
   private bool _followPlayer = false;
   private float _animationTime;
   private Vector3 _localScale;
 
+  private bool _itemExists = false;
+
   void Start()
   {
     _animationTime = squashedDuration;
     _localScale = transform.localScale;
+    _itemExists = item != null;
   }
 
   void Update()
   {
     if (_followPlayer && !dead)
     {
+      if (_itemExists)
+      {
+        item.transform.position = Vector3.Lerp(item.transform.position, transform.position + transform.up*transform.localScale.y + transform.up*offset, Time.deltaTime*followSpeed);
+        item.transform.Rotate(Vector3.up, Time.deltaTime*rotationSpeed);
+      }
       agent.SetDestination(_target.position);
+      if (Vector3.Distance(transform.position, _target.position) <= agent.stoppingDistance)
+      {
+        // rotate to face player
+        FaceTarget();
+        // then
+        // attack
+      }
     }
+
+
     if (die && !dead)
     {
       _animationTime = 0.0f;
       dead = true;
     }
-
     if (_animationTime < squashedDuration)
     {
       _animationTime += Time.deltaTime;
@@ -49,6 +70,13 @@ public class Enemy : MonoBehaviour
       _target = collider.transform;
       _followPlayer = true;
     }
+  }
+
+  private void FaceTarget()
+  {
+    Vector3 direction = (_target.position - transform.position).normalized;
+    Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+    transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime*5f);
   }
 
   // void OnTriggerExit(Collider collider)

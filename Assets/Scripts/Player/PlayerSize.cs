@@ -9,8 +9,15 @@ public partial class Player : MonoBehaviour
   public AnimationCurve sizeChangeAnimation;
   public float sizeChangeDuration = 1.0f;
 
+  public GameObject item;
+
   private float _animationTime;
   private Vector3 _localScale;
+
+  private bool _itemExists;
+  private float _rotationSpeed;
+  private float _itemOffset;
+  private float _itemFollowSpeed;
 
   private void SizeInit()
   {
@@ -24,6 +31,12 @@ public partial class Player : MonoBehaviour
     {
       transform.localScale = Vector3.Lerp(transform.localScale, _localScale, sizeChangeAnimation.Evaluate(_animationTime/sizeChangeDuration));
       _animationTime += Time.deltaTime;
+    }
+
+    if (_itemExists)
+    {
+      item.transform.position = Vector3.Lerp(item.transform.position, transform.position + transform.up*transform.localScale.y + transform.up*_itemOffset, Time.deltaTime*_itemFollowSpeed);
+      item.transform.Rotate(Vector3.up, Time.deltaTime*_rotationSpeed);
     }
   }
 
@@ -45,6 +58,15 @@ public partial class Player : MonoBehaviour
         {
           enemy.die = true;
           _localScale += new Vector3(0.5f, 0.5f, 0.5f);
+
+          if (enemy.item != null)
+          {
+            item = enemy.item;
+            _rotationSpeed = enemy.rotationSpeed;
+            _itemOffset = enemy.offset;
+            _itemFollowSpeed = enemy.followSpeed;
+            _itemExists = true;
+          }
         }
       }
     }
