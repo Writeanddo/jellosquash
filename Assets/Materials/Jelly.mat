@@ -60,7 +60,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_059089318284410e9833be914ecc66b5: 0.5
     - Vector1_06ae2ea2030a4b4ea3c636b77ceac642: 0.05
+    - Vector1_263eda7b85f547b2addfecaa94732e07: 0.05
     - Vector1_29e05df4b7fd4f238cc87990da69ca61: 0.3
     - Vector1_6249ad4e3fa44ccdbfd1c22537b4818a: 0.1
     - Vector1_c24dfff521d348c9b54f238f0f394475: 50000
@@ -107,7 +109,7 @@ Material:
     - _TransparentWritingMotionVec: 0
     - _TransparentZWrite: 0
     - _UseShadowThreshold: 0
-    - _Wobbliness: 0.2
+    - _Wobbliness: 0.3
     - _ZTestDepthEqualForOpaque: 4
     - _ZTestGBuffer: 4
     - _ZTestTransparent: 4
