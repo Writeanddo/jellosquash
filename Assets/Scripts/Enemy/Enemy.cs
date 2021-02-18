@@ -20,8 +20,7 @@ public class Enemy : MonoBehaviour
   [Range(0.8f, 1)]
   public float rotationThreshold = 0.9f;
   public float attackInterval = 2.0f;
-  public AnimationCurve attackAnimationCurve;
-  public Vector3 attackOffsetPos;
+  public float attackRange = 10.0f;
   public float attackDuration;
 
   private Transform _target;
@@ -33,6 +32,7 @@ public class Enemy : MonoBehaviour
 
   private float _attackIntervalTime;
   private float _attackTime;
+  private Vector3 _currentPosition;
 
   void Start()
   {
@@ -41,6 +41,7 @@ public class Enemy : MonoBehaviour
     _itemExists = item != null;
     _attackIntervalTime = attackInterval;
     _attackTime = attackDuration;
+    _currentPosition = transform.position;
   }
 
   void Update()
@@ -52,22 +53,30 @@ public class Enemy : MonoBehaviour
         item.transform.position = Vector3.Lerp(item.transform.position, transform.position + transform.up*transform.localScale.y + transform.up*offset, Time.deltaTime*followSpeed);
         item.transform.Rotate(Vector3.up, Time.deltaTime*rotationSpeed);
       }
-      agent.SetDestination(_target.position);
+
+      Vector3 direction = (_target.position - transform.position).normalized;
       if (Vector3.Distance(transform.position, _target.position) <= agent.stoppingDistance)
       {
         // rotate to face player
-        if (FaceTarget())
+        if (FaceTarget(ref direction))
         {
-          _attackIntervalTime -= Time.deltaTime;
+          if (_attackTime >= attackDuration) _attackIntervalTime -= Time.deltaTime;
           if (_attackIntervalTime <= 0.0f)
           {
             _attackTime = 0.0f;
             _attackIntervalTime = attackInterval;
-            print("Attack!");
+            _currentPosition = transform.position;
           }
-          // attack
         }
       }
+
+      if (_attackTime < attackDuration)
+      {
+        _attackIntervalTime = attackInterval;
+        _attackTime += Time.deltaTime;
+        agent.stoppingDistance = 0.0f;
+      } else agent.stoppingDistance = attackRange;
+      agent.SetDestination(_target.position);
     }
 
 
@@ -92,11 +101,10 @@ public class Enemy : MonoBehaviour
     }
   }
 
-  private bool FaceTarget()
+  private bool FaceTarget(ref Vector3 direction)
   {
-    Vector3 direction = (_target.position - transform.position).normalized;
     Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
-    transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime*5f);
+    transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime*2.0f);
 
     if (Vector3.Dot(direction, transform.forward) > rotationThreshold) return true;
     return false;

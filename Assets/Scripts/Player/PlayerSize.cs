@@ -10,6 +10,8 @@ public partial class Player : MonoBehaviour
   public float sizeChangeDuration = 1.0f;
 
   public GameObject item;
+  public float knockbackForce;
+  public float knockupForce;
 
   private float _animationTime;
   private Vector3 _localScale;
@@ -51,9 +53,9 @@ public partial class Player : MonoBehaviour
 
     if ((enemyDieLayer & 1 << collider.gameObject.layer) == 1 << collider.gameObject.layer)
     {
+      Enemy enemy = collider.transform.parent.GetComponent<Enemy>();
       if (attack && _localScale.x > collider.transform.parent.localScale.x)
       {
-        Enemy enemy = collider.transform.parent.GetComponent<Enemy>();
         if (!enemy.dead)
         {
           enemy.die = true;
@@ -67,6 +69,14 @@ public partial class Player : MonoBehaviour
             _itemFollowSpeed = enemy.followSpeed;
             _itemExists = true;
           }
+        }
+      } else
+      {
+        if (!enemy.dead)
+        {
+          _velocity += enemy.transform.forward*knockbackForce + enemy.transform.up*(knockupForce-gravity*0.5f);
+          if (_localScale.x <= 1.0f) dead = true;
+          else if (_localScale.x > 1.0f) DropJelly(enemy.transform.forward);
         }
       }
     }
