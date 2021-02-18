@@ -41,8 +41,11 @@ public partial class Player : MonoBehaviour
       if (attack && _localScale.x > collider.transform.parent.localScale.x)
       {
         Enemy enemy = collider.transform.parent.GetComponent<Enemy>();
-        if (!enemy.dead) enemy.die = true;
-        _localScale += new Vector3(0.5f, 0.5f, 0.5f);
+        if (!enemy.dead)
+        {
+          enemy.die = true;
+          _localScale += new Vector3(0.5f, 0.5f, 0.5f);
+        }
       }
     }
   }
