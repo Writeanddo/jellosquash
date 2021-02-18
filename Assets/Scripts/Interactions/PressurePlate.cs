@@ -7,7 +7,7 @@ public class PressurePlate : MonoBehaviour
   public Transform[] gates;
   public float animationDuration = 1.0f;
   public AnimationCurve animationCurve;
-  public float timeOffset = 0.2f;
+  // public float timeOffset = 0.2f;
   public Vector3 positionOffset = new Vector3(0.0f, -1.0f, 0.0f);
   public LayerMask acceptedLayer;
 

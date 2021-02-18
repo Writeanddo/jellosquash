@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.VFX;
+using System.Collections;
 
 public partial class Player
 {
@@ -18,12 +20,15 @@ public partial class Player
   public float jumpHeight = 7.0f;
   private bool _isGrounded;
   public AnimationCurve jumpAnimation;
+  public GameObject squashVFXPrefab;
 
   public GameObject jellyPrefab;
   public float spawnOffset = 0.1f;
   public float throwVelocity = 1.0f;
 
   public bool attack = false;
+
+  private void MovementInit(){}
 
   private void MovementUpdate()
   {
@@ -33,6 +38,8 @@ public partial class Player
       if (Physics.CheckSphere(groundCheck.position, groundDistance))
       {
         _isGrounded = true;
+        if (attack) StartCoroutine(SquashVFX());
+        attack = false;
         break;
       }
       _isGrounded = false;
@@ -82,5 +89,15 @@ public partial class Player
 
     _velocity.y += gravity * Time.deltaTime;
       controller.Move(_velocity * Time.deltaTime);
+  }
+
+  public IEnumerator SquashVFX()
+  {
+    VisualEffect squashVFX = Instantiate(squashVFXPrefab, transform.position, transform.rotation).GetComponent<VisualEffect>();
+    squashVFX.Play();
+    yield return new WaitForSeconds(0.2f);
+    squashVFX.Stop();
+    yield return new WaitForSeconds(3.0f);
+    Destroy(squashVFX.gameObject);
   }
 }

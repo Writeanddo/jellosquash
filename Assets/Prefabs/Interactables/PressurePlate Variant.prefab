@@ -54,7 +54,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  timeOffset: 0.2
   positionOffset: {x: 0, y: -10, z: 0}
   acceptedLayer:
     serializedVersion: 2
@@ -128,7 +127,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 818360cbaed65a1428de38fe5c811f71, type: 3}
       propertyPath: m_Name
-      value: PressurePlate
+      value: PressurePlate Variant
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 818360cbaed65a1428de38fe5c811f71, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -140,7 +139,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4967783311982922925, guid: 818360cbaed65a1428de38fe5c811f71, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 818360cbaed65a1428de38fe5c811f71, type: 3}

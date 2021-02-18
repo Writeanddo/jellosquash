@@ -204,9 +204,11 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  squashVFXPrefab: {fileID: 1876671766366874197, guid: b64b3c0e4ba12d34aa564662277cd160, type: 3}
   jellyPrefab: {fileID: 188440627323341929, guid: fa50e3e47a72b2f4f9902fa47068a37b, type: 3}
   spawnOffset: 1
   throwVelocity: 1
+  attack: 0
   pickupLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -322,7 +324,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 13d14ee666d66f64080780413d6760ff, type: 2}
     - target: {fileID: 919132149155446097, guid: 2fa8f41292b135545ae5db6dc95f7000, type: 3}
       propertyPath: m_Name
-      value: Jelly Variant
+      value: Jelly
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2fa8f41292b135545ae5db6dc95f7000, type: 3}
       propertyPath: m_Layer
@@ -331,6 +333,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2fa8f41292b135545ae5db6dc95f7000, type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6558787113205837210, guid: 2fa8f41292b135545ae5db6dc95f7000, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fa8f41292b135545ae5db6dc95f7000, type: 3}
