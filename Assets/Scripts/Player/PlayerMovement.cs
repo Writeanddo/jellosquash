@@ -16,6 +16,7 @@ public partial class Player
   public float gravity = -49.05f;
 
   public Transform[] groundChecks;
+  public LayerMask groundLayer;
   public float groundDistance = 0.7f;
   public float jumpHeight = 7.0f;
   private bool _isGrounded;
@@ -35,10 +36,30 @@ public partial class Player
     Cursor.lockState = CursorLockMode.Locked;
     foreach (Transform groundCheck in groundChecks)
     {
-      if (Physics.CheckSphere(groundCheck.position, groundDistance))
+      if (Physics.CheckSphere(groundCheck.position, groundDistance, groundLayer))
       {
         _isGrounded = true;
-        if (attack) StartCoroutine(SquashVFX());
+        if (attack)
+        {
+          StartCoroutine(SquashVFX());
+          if (transform.localScale.y > 1.0f)
+          {
+            GameObject littleJelly = Instantiate(jellyPrefab,
+              transform.position + transform.forward*transform.localScale.z + transform.forward*spawnOffset + transform.up*spawnOffset,
+              transform.rotation);
+            littleJelly.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+            Rigidbody littleJellyRB = littleJelly.GetComponent<Rigidbody>();
+            littleJellyRB.isKinematic = false;
+            littleJellyRB.velocity = transform.forward*throwVelocity + transform.up*throwVelocity*2;
+
+            SphereCollider littleJellySC = littleJelly.GetComponent<SphereCollider>();
+            littleJellySC.isTrigger = false;
+
+            _localScale -= new Vector3(0.5f, 0.5f, 0.5f);
+            _animationTime = 0.0f;
+          }
+        }
+
         attack = false;
         break;
       }
@@ -71,20 +92,6 @@ public partial class Player
     {
       attack = true;
       _velocity.y = -Mathf.Sqrt(jumpHeight * -4.0f * gravity);
-      if (transform.localScale.y > 1.0f)
-      {
-        GameObject littleJelly = Instantiate(jellyPrefab, transform.position + transform.forward*transform.localScale.z + transform.forward*spawnOffset, transform.rotation);
-        littleJelly.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
-        Rigidbody littleJellyRB = littleJelly.GetComponent<Rigidbody>();
-        littleJellyRB.isKinematic = false;
-        littleJellyRB.velocity = transform.forward*throwVelocity;
-
-        SphereCollider littleJellySC = littleJelly.GetComponent<SphereCollider>();
-        littleJellySC.isTrigger = false;
-
-        _localScale -= new Vector3(0.5f, 0.5f, 0.5f);
-        _animationTime = 0.0f;
-      }
     }
 
     _velocity.y += gravity * Time.deltaTime;

@@ -3,7 +3,12 @@ guid: 127aabce8991edb42b5214097bdb049a
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SpiderWeb
+    second: {fileID: 2100000, guid: e7726209033c67745bd62665341d9b3c, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -90,6 +90,36 @@ Transform:
   m_Father: {fileID: 8881665111647546250}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6543634184004670786
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8060161903780155077}
+  m_Layer: 3
+  m_Name: LookAt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8060161903780155077
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6543634184004670786}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8881665111647546250}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6547572345188631636
 GameObject:
   m_ObjectHideFlags: 0
@@ -160,6 +190,9 @@ MonoBehaviour:
   - {fileID: 2782736828787555260}
   - {fileID: 3984776137801427221}
   - {fileID: 1366280212395409496}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 895
   groundDistance: 0.2
   jumpHeight: 7
   jumpAnimation:
@@ -207,11 +240,14 @@ MonoBehaviour:
   squashVFXPrefab: {fileID: 1876671766366874197, guid: b64b3c0e4ba12d34aa564662277cd160, type: 3}
   jellyPrefab: {fileID: 188440627323341929, guid: fa50e3e47a72b2f4f9902fa47068a37b, type: 3}
   spawnOffset: 1
-  throwVelocity: 1
+  throwVelocity: 2
   attack: 0
   pickupLayer:
     serializedVersion: 2
     m_Bits: 128
+  enemyDieLayer:
+    serializedVersion: 2
+    m_Bits: 2048
   sizeChangeAnimation:
     serializedVersion: 2
     m_Curve:
@@ -324,7 +360,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 13d14ee666d66f64080780413d6760ff, type: 2}
     - target: {fileID: 919132149155446097, guid: 2fa8f41292b135545ae5db6dc95f7000, type: 3}
       propertyPath: m_Name
-      value: Jelly
+      value: Jelly Variant
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2fa8f41292b135545ae5db6dc95f7000, type: 3}
       propertyPath: m_Layer

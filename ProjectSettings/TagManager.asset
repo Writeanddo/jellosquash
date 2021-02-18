@@ -15,8 +15,8 @@ TagManager:
   - Pickup
   - PostProcessing
   - Not in Reflection
-  - 
-  - 
+  - Enemy
+  - EnemyDie
   - 
   - 
   - 

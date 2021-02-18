@@ -5,6 +5,7 @@ public partial class Player : MonoBehaviour
 
   [Header("Size")]
   public LayerMask pickupLayer;
+  public LayerMask enemyDieLayer;
   public AnimationCurve sizeChangeAnimation;
   public float sizeChangeDuration = 1.0f;
 
@@ -33,6 +34,16 @@ public partial class Player : MonoBehaviour
       _localScale += collider.transform.localScale;
       _animationTime = 0.0f;
       Destroy(collider.gameObject);
+    }
+
+    if ((enemyDieLayer & 1 << collider.gameObject.layer) == 1 << collider.gameObject.layer)
+    {
+      if (attack && _localScale.x > collider.transform.parent.localScale.x)
+      {
+        Enemy enemy = collider.transform.parent.GetComponent<Enemy>();
+        if (!enemy.dead) enemy.die = true;
+        _localScale += collider.transform.parent.localScale;
+      }
     }
   }
 }
