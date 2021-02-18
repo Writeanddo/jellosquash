@@ -9,6 +9,7 @@ public class UICinematic : MonoBehaviour
     // Update is called once per frame
   public void PressPlay()
   {
+    print("test");
     menuCam.Priority = 1;
   }
   
