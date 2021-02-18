@@ -42,22 +42,7 @@ public partial class Player
         if (attack)
         {
           StartCoroutine(SquashVFX());
-          if (transform.localScale.y > 1.0f)
-          {
-            GameObject littleJelly = Instantiate(jellyPrefab,
-              transform.position + transform.forward*transform.localScale.z + transform.forward*spawnOffset + transform.up*spawnOffset,
-              transform.rotation);
-            littleJelly.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
-            Rigidbody littleJellyRB = littleJelly.GetComponent<Rigidbody>();
-            littleJellyRB.isKinematic = false;
-            littleJellyRB.velocity = transform.forward*throwVelocity + transform.up*throwVelocity*2;
-
-            SphereCollider littleJellySC = littleJelly.GetComponent<SphereCollider>();
-            littleJellySC.isTrigger = false;
-
-            _localScale -= new Vector3(0.5f, 0.5f, 0.5f);
-            _animationTime = 0.0f;
-          }
+          DropJelly(transform.forward);
         }
 
         attack = false;
@@ -96,6 +81,8 @@ public partial class Player
 
     _velocity.y += gravity * Time.deltaTime;
       controller.Move(_velocity * Time.deltaTime);
+
+    _velocity *= 0.98f;
   }
 
   public IEnumerator SquashVFX()
