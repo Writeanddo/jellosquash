@@ -17,6 +17,13 @@ public class Enemy : MonoBehaviour
   public float followSpeed = 10.0f;
   public float rotationSpeed = 10.0f;
 
+  [Range(0.8f, 1)]
+  public float rotationThreshold = 0.9f;
+  public float attackInterval = 2.0f;
+  public AnimationCurve attackAnimationCurve;
+  public Vector3 attackOffsetPos;
+  public float attackDuration;
+
   private Transform _target;
   private bool _followPlayer = false;
   private float _animationTime;
@@ -24,11 +31,16 @@ public class Enemy : MonoBehaviour
 
   private bool _itemExists = false;
 
+  private float _attackIntervalTime;
+  private float _attackTime;
+
   void Start()
   {
     _animationTime = squashedDuration;
     _localScale = transform.localScale;
     _itemExists = item != null;
+    _attackIntervalTime = attackInterval;
+    _attackTime = attackDuration;
   }
 
   void Update()
@@ -44,9 +56,17 @@ public class Enemy : MonoBehaviour
       if (Vector3.Distance(transform.position, _target.position) <= agent.stoppingDistance)
       {
         // rotate to face player
-        FaceTarget();
-        // then
-        // attack
+        if (FaceTarget())
+        {
+          _attackIntervalTime -= Time.deltaTime;
+          if (_attackIntervalTime <= 0.0f)
+          {
+            _attackTime = 0.0f;
+            _attackIntervalTime = attackInterval;
+            print("Attack!");
+          }
+          // attack
+        }
       }
     }
 
@@ -72,11 +92,15 @@ public class Enemy : MonoBehaviour
     }
   }
 
-  private void FaceTarget()
+  private bool FaceTarget()
   {
     Vector3 direction = (_target.position - transform.position).normalized;
     Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
     transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime*5f);
+
+    if (Vector3.Dot(direction, transform.forward) > rotationThreshold) return true;
+    return false;
+
   }
 
   // void OnTriggerExit(Collider collider)
