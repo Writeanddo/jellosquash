@@ -17,6 +17,8 @@ public class Enemy : MonoBehaviour
   public float followSpeed = 10.0f;
   public float rotationSpeed = 10.0f;
 
+  public GameObject stats;
+
   [Range(0.8f, 1)]
   public float rotationThreshold = 0.9f;
   public float attackInterval = 2.0f;
@@ -83,6 +85,7 @@ public class Enemy : MonoBehaviour
     if (die && !dead)
     {
       _animationTime = 0.0f;
+      stats.SetActive(false);
       dead = true;
     }
     if (_animationTime < squashedDuration)

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public partial class Player : MonoBehaviour
 {
-  public static bool dead = false;
+  public static bool dead = true;
 
   void Start()
   {
