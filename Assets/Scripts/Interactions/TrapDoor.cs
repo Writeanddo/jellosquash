@@ -22,7 +22,6 @@ public class TrapDoor : MonoBehaviour
   {
     if ((playerLayer & 1 << collider.gameObject.layer) == 1 << collider.gameObject.layer)
     {
-      print("Player Detected");
       Player player = collider.GetComponent<Player>();
       if (player.attack)
       {
