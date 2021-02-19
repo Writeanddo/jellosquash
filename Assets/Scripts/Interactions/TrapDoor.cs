@@ -15,7 +15,6 @@ public class TrapDoor : MonoBehaviour
   public TextMeshPro massText;
 
   void Start() => massText.text = minimumMass.ToString("f1");
-
   void Update() => massText.gameObject.transform.parent.transform.LookAt(Camera.main.transform);
 
   void OnTriggerEnter(Collider collider)

@@ -3,9 +3,10 @@ using UnityEngine;
 public partial class Player : MonoBehaviour
 {
   public static bool dead = true;
-
+  public static bool move = false;
   void Start()
   {
+    move = false;
     dead = false;
     MovementInit();
     SizeInit();
