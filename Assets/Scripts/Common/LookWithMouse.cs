@@ -16,13 +16,15 @@ public class LookWithMouse : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
+    {   
         Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
     void Update()
     {
+      if(!Player.dead) Cursor.visible = false;
+      else Cursor.visible = true;
 #if ENABLE_INPUT_SYSTEM
         float mouseX = 0, mouseY = 0;
 
