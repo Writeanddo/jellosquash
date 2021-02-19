@@ -13,6 +13,12 @@ public class CageDoor : MonoBehaviour
 
   private bool _trigger = false;
   private float _animationTime;
+  private Quaternion _localRotation;
+
+  void Start()
+  {
+    _localRotation = door.transform.localRotation;
+  }
 
   void Update()
   {
@@ -22,7 +28,7 @@ public class CageDoor : MonoBehaviour
 
       if (_trigger) _animationTime += Time.deltaTime;
       else _animationTime -= Time.deltaTime;
-      door.transform.rotation = Quaternion.Lerp(Quaternion.identity, targetRotation, evaluatedTime);
+      door.transform.localRotation = Quaternion.Lerp(_localRotation, targetRotation, evaluatedTime);
 
     }
   }

@@ -1,27 +1,38 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class TrapDoor : MonoBehaviour
 {
   public GameObject trapDoor;
   public GameObject ruptured;
-  public float offset;
-  KeyCode a = KeyCode.M;
-    // Start is called before the first frame update
-    // Update is called once per frame
-  void Update()
-  {
-    // if player is heavy enuf
-    // level up
+  public LayerMask playerLayer;
+  [Tooltip("This value differs in different levels.")]
+  public float minimumMass;
+  [Tooltip("This value differs in different levels.")]
+  public int dropJellyCount;
+  public BoxCollider disableCollider;
 
-    if(Input.GetKeyDown(a))
+  void OnTriggerEnter(Collider collider)
+  {
+    if ((playerLayer & 1 << collider.gameObject.layer) == 1 << collider.gameObject.layer)
     {
-      // level up
-      Destroy(trapDoor);
-      GetComponent<BoxCollider>().enabled = false;
-      GameObject fragments = Instantiate(ruptured, transform.position + transform.localScale.x * transform.right *offset, transform.rotation);
-      fragments.transform.localScale = transform.localScale;
+      Player player = collider.GetComponent<Player>();
+      if (player.attack)
+      {
+        if (player.transform.localScale.x >= minimumMass)
+        {
+          DestroyTrapDoor();
+          player.RuptureDropJelly(dropJellyCount);
+        }
+      }
     }
+  }
+
+  private void DestroyTrapDoor()
+  {
+    trapDoor.GetComponent<MeshRenderer>().enabled = false;
+    disableCollider.enabled = false;
+    // GameObject fragments = Instantiate(ruptured, transform.position + transform.localScale.x * transform.right *offset, transform.rotation);
+    GameObject fragments = Instantiate(ruptured, trapDoor.transform.position, trapDoor.transform.rotation);
+    fragments.transform.localScale = transform.localScale;
   }
 }

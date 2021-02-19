@@ -163,8 +163,16 @@ PrefabInstance:
       value: Cage Variant
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: cd64955a8188e814890fd9572b0670b9, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cd64955a8188e814890fd9572b0670b9, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3074922355946793426, guid: cd64955a8188e814890fd9572b0670b9, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3074922355946793426, guid: cd64955a8188e814890fd9572b0670b9, type: 3}
       propertyPath: m_NavMeshLayer
@@ -173,6 +181,10 @@ PrefabInstance:
     - target: {fileID: 3074922355946793426, guid: cd64955a8188e814890fd9572b0670b9, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7849714200538148067, guid: cd64955a8188e814890fd9572b0670b9, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 7849714200538148067, guid: cd64955a8188e814890fd9572b0670b9, type: 3}
       propertyPath: m_NavMeshLayer

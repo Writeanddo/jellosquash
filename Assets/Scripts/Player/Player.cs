@@ -17,6 +17,14 @@ public partial class Player : MonoBehaviour
     SizeUpdate();
   }
 
+  public void RuptureDropJelly(int totalMassLossCount)
+  {
+    for (int i=0; i < totalMassLossCount; i++)
+    {
+      DropJelly(new Vector3(Random.Range(0.0f, 1.0f), 0.0f, Random.Range(0.0f, 1.0f)).normalized);
+    }
+  }
+
   private void DropJelly(Vector3 direction)
   {
     if (transform.localScale.y > 1.0f)

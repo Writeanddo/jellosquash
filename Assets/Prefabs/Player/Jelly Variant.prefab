@@ -67,8 +67,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 0
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2e56e26324579ff43a78ec43b24fe8ab, type: 2}
+  m_sharedMaterial: {fileID: -5441897030128672513, guid: 2e56e26324579ff43a78ec43b24fe8ab, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -642,7 +642,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 13d14ee666d66f64080780413d6760ff, type: 2}
     - target: {fileID: 919132149155446097, guid: 2fa8f41292b135545ae5db6dc95f7000, type: 3}
       propertyPath: m_Name
-      value: Jelly
+      value: Jelly Variant
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2fa8f41292b135545ae5db6dc95f7000, type: 3}
       propertyPath: m_Layer
