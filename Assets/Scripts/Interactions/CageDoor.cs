@@ -48,5 +48,6 @@ public class CageDoor : MonoBehaviour
   void OnTriggerExit(Collider collider)
   {
     _trigger = false;
+    disableCollider.enabled = true;
   }
 }

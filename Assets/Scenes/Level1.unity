@@ -6846,6 +6846,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cage
       objectReference: {fileID: 0}
+    - target: {fileID: 6496013811277371438, guid: 4a019eb666b65bc4e99e972da27b48ae, type: 3}
+      propertyPath: m_Size.x
+      value: 0.9926048
+      objectReference: {fileID: 0}
+    - target: {fileID: 6496013811277371438, guid: 4a019eb666b65bc4e99e972da27b48ae, type: 3}
+      propertyPath: m_Size.y
+      value: 0.49999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 6496013811277371438, guid: 4a019eb666b65bc4e99e972da27b48ae, type: 3}
+      propertyPath: m_Center.x
+      value: -0.16629921
+      objectReference: {fileID: 0}
+    - target: {fileID: 6496013811277371438, guid: 4a019eb666b65bc4e99e972da27b48ae, type: 3}
+      propertyPath: m_Center.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6496013811277371438, guid: 4a019eb666b65bc4e99e972da27b48ae, type: 3}
+      propertyPath: m_Center.z
+      value: 1.6723856e-10
+      objectReference: {fileID: 0}
     - target: {fileID: 6728715834464491136, guid: 4a019eb666b65bc4e99e972da27b48ae, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8

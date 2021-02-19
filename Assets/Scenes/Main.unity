@@ -133,6 +133,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8881665111647546250, guid: 042901243337d1f45a73e9e17d10b494, type: 3}
   m_PrefabInstance: {fileID: 8991641309691820412}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &539620133 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4075239648071498792, guid: fa91a7ef4d4d6824da4d6ff143235dab, type: 3}
+  m_PrefabInstance: {fileID: 839809178}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ea9ca47db8fcc24dbb667b174cd7af9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &585982645
 GameObject:
   m_ObjectHideFlags: 0
@@ -253,6 +264,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4075239648071498792, guid: fa91a7ef4d4d6824da4d6ff143235dab, type: 3}
+      propertyPath: menuPanel
+      value: 
+      objectReference: {fileID: 987729500}
     - target: {fileID: 4075239648071498793, guid: fa91a7ef4d4d6824da4d6ff143235dab, type: 3}
       propertyPath: m_Name
       value: CinemaCams
@@ -303,6 +318,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa91a7ef4d4d6824da4d6ff143235dab, type: 3}
+--- !u!1 &987729500 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7918966510674456089, guid: 6e2fe49231d4f724e9a6631b5574272a, type: 3}
+  m_PrefabInstance: {fileID: 1716792480}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1716792480
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -310,6 +330,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7918966509923450287, guid: 6e2fe49231d4f724e9a6631b5574272a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 539620133}
+    - target: {fileID: 7918966509923450287, guid: 6e2fe49231d4f724e9a6631b5574272a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QuitGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 7918966510279623731, guid: 6e2fe49231d4f724e9a6631b5574272a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 539620133}
+    - target: {fileID: 7918966510279623731, guid: 6e2fe49231d4f724e9a6631b5574272a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 987729500}
+    - target: {fileID: 7918966510279623731, guid: 6e2fe49231d4f724e9a6631b5574272a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PressPlay
+      objectReference: {fileID: 0}
+    - target: {fileID: 7918966510279623731, guid: 6e2fe49231d4f724e9a6631b5574272a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 7918966510637098062, guid: 6e2fe49231d4f724e9a6631b5574272a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 539620133}
+    - target: {fileID: 7918966510637098062, guid: 6e2fe49231d4f724e9a6631b5574272a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PressCredit
+      objectReference: {fileID: 0}
     - target: {fileID: 7918966510674456069, guid: 6e2fe49231d4f724e9a6631b5574272a, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -397,6 +449,10 @@ PrefabInstance:
     - target: {fileID: 7918966510674456089, guid: 6e2fe49231d4f724e9a6631b5574272a, type: 3}
       propertyPath: m_Name
       value: MenuCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 7918966510692022811, guid: 6e2fe49231d4f724e9a6631b5574272a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e2fe49231d4f724e9a6631b5574272a, type: 3}
