@@ -51,6 +51,7 @@ public partial class Player : MonoBehaviour
         _localScale += collider.transform.localScale;
         _animationTime = 0.0f;
         Destroy(collider.gameObject);
+        
       }
     }
 

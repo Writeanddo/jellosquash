@@ -31,6 +31,13 @@ public partial class Player
 
   private void MovementInit(){}
 
+  public AudioSource Smash;
+  public AudioSource Jump;
+  public AudioSource TakenDamage;
+  public AudioSource Pickup;
+  public AudioSource GainMass;
+
+
   private void MovementUpdate()
   {
     // Cursor.lockState = CursorLockMode.Locked;
@@ -71,12 +78,14 @@ public partial class Player
     {
       attack = false;
       _velocity.y = Mathf.Sqrt(jumpHeight * -2.0f * gravity);
+      StartCoroutine("PlayJumpAudio");
     }
 
     if (Input.GetButtonDown("Fire1") && !_isGrounded)
     {
       attack = true;
       _velocity.y = -Mathf.Sqrt(jumpHeight * -4.0f * gravity);
+      StartCoroutine("PlaySmashAudio");
     }
 
     _velocity.y += gravity * Time.deltaTime;
@@ -93,5 +102,30 @@ public partial class Player
     squashVFX.Stop();
     yield return new WaitForSeconds(3.0f);
     Destroy(squashVFX.gameObject);
+  }
+
+  void PlaySmashAudio()
+  {
+    Smash.Play();
+  }
+
+  void PlayJumpAudio()
+  {
+    Jump.Play();
+  }
+
+  void PlayTakenDamageAudio()
+  {
+    TakenDamage.Play();
+  }
+
+  void PlayPickupAudio()
+  {
+    Pickup.Play();
+  }
+
+  void PalyGainAudio()
+  {
+    GainMass.Play();
   }
 }
