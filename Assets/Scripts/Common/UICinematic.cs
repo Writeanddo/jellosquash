@@ -6,13 +6,12 @@ public class UICinematic : MonoBehaviour
   // main cam - 10
   public CinemachineVirtualCamera menuCam; //12
   public CinemachineVirtualCamera creditCam; //11
-    // Start is called before the first frame update
   public GameObject menuPanel;
-  public KeyCode escape = KeyCode.Escape;
+  KeyCode escape = KeyCode.Escape;
   public GameObject credit;
   public static bool inGame;
   public BgMusic music;
-  public bool BackToMenu;
+  bool BackToMenu;
   public void PressPlay()
   {
     BackToMenu = true;
@@ -59,7 +58,7 @@ public class UICinematic : MonoBehaviour
   {
     if(Input.GetKeyDown(escape))
     {
-        if(BackToMenu)
+      if(BackToMenu)
       {
         music.GameExitMusic();
       }
