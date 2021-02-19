@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
   public Transform[] spawnLocations;
   public GameObject player;
   public static string currScene;
+  public static int currSize;
 
   void Awake()
   {

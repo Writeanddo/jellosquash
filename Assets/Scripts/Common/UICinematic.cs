@@ -8,10 +8,14 @@ public class UICinematic : MonoBehaviour
     // Start is called before the first frame update
   public GameObject menuPanel;
   public KeyCode escape = KeyCode.Escape;
+
+  public static bool inGame;
+
   public void PressPlay()
   {
     Player.move = true;
     Cursor.visible = false;
+    inGame = true;
     menuCam.Priority = 9;
     creditCam.Priority = 8;
   }
@@ -26,6 +30,7 @@ public class UICinematic : MonoBehaviour
     // move to start menu 
     Player.move = false;
     Cursor.visible = true;
+    inGame = false;
     menuCam.Priority = 12;
     creditCam.Priority = 11;
     menuPanel.SetActive(true);
@@ -46,5 +51,11 @@ public class UICinematic : MonoBehaviour
       // print("Quit!");
       QuitGame();
     }
+
+    if (inGame) Cursor.lockState = CursorLockMode.Locked;
+    else Cursor.lockState = CursorLockMode.None;
   }
 }
+
+// reload a scene
+// cursor hide or not
