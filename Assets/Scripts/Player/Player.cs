@@ -28,6 +28,16 @@ public partial class Player : MonoBehaviour
     }
   }
 
+  public void DestroyItem()
+  {
+    if (_itemExists)
+    {
+      Destroy(item);
+      item = null;
+      _itemExists = false;
+    }
+  }
+
   private void DropJelly(Vector3 direction)
   {
     if (transform.localScale.y > 1.0f)

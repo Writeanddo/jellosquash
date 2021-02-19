@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public partial class Player : MonoBehaviour
 {
@@ -21,7 +22,7 @@ public partial class Player : MonoBehaviour
   private float _itemOffset;
   private float _itemFollowSpeed;
 
-  private void SizeInit()
+  public void SizeInit()
   {
     _animationTime = sizeChangeDuration;
     _localScale = transform.localScale;
@@ -50,7 +51,7 @@ public partial class Player : MonoBehaviour
       {
         _localScale += collider.transform.localScale;
         _animationTime = 0.0f;
-        Destroy(collider.gameObject);
+        StartCoroutine(DestroyJelly(collider.gameObject));
       }
     }
 
@@ -83,5 +84,14 @@ public partial class Player : MonoBehaviour
         }
       }
     }
+  }
+
+  private IEnumerator DestroyJelly(GameObject jelly)
+  {
+    jelly.transform.position += jelly.transform.up*500.0f;
+    yield return new WaitForSeconds(0.1f);
+    jelly.SetActive(false);
+    yield return new WaitForSeconds(1);
+    Destroy(jelly);
   }
 }

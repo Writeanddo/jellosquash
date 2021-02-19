@@ -7,17 +7,19 @@ public class GameManager : MonoBehaviour
   public string[] scenes;
   private bool[] _isLoaded;
   List<AsyncOperation> scenesToLoad = new List<AsyncOperation>();
-  public string startScene;
+  public string startScene = "Level1";
+  public float startSize = 1.0f;
 
   public Transform[] spawnLocations;
   public GameObject player;
   public static string currScene;
-  public static int currSize;
+  public static float currSize;
 
   void Awake()
   {
     _isLoaded = new bool[scenes.Length];
     currScene = startScene;
+    currSize = startSize;
     DontDestroyOnLoad(this);
   }
 
@@ -60,6 +62,8 @@ public class GameManager : MonoBehaviour
       if (spawnLocations[s].name == currScene)
       {
         player.transform.position = spawnLocations[s].position;
+        player.transform.localScale = new Vector3(currSize, currSize, currSize);
+        player.GetComponent<Player>().SizeInit();
         break;
       }
     }

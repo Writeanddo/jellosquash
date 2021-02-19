@@ -1,6 +1,5 @@
 using UnityEngine;
 using TMPro;
-using Cinemachine;
 
 public class SlimeUI : MonoBehaviour
 {

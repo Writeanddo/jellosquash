@@ -28,6 +28,7 @@ public class TrapDoor : MonoBehaviour
         {
           DestroyTrapDoor();
           player.RuptureDropJelly(dropJellyCount);
+          player.DestroyItem();
         }
       }
     }

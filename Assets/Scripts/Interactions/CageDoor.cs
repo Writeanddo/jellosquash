@@ -47,7 +47,10 @@ public class CageDoor : MonoBehaviour
 
   void OnTriggerExit(Collider collider)
   {
-    _trigger = false;
-    disableCollider.enabled = true;
+    if ((playerLayer & 1 << collider.gameObject.layer) == 1 << collider.gameObject.layer)
+    {
+      _trigger = false;
+      disableCollider.enabled = true;
+    }
   }
 }

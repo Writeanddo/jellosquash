@@ -18,6 +18,9 @@ public class PressurePlate : MonoBehaviour
   [ColorUsage(false, true)]
   public Color triggeredColor;
 
+  public float targetWeight = 0.5f;
+  public float currWeight;
+
   private Vector3 _localPos;
   private Vector3[] _originalPos;
   private float _animationTime;
@@ -32,11 +35,14 @@ public class PressurePlate : MonoBehaviour
     _animationTime = 0.0f;
     _originalPos = new Vector3[gates.Length];
     for (int g=0; g < gates.Length; g++)
-      _originalPos[g] = gates[g].localPosition;
+      _originalPos[g] = gates[g].position;
 
-    _localPos = transform.localPosition;
+    _localPos = transform.position;
     _pressurePlateMat = GetComponent<MeshRenderer>().material;
     colorProperty = Shader.PropertyToID("_PressurePlateColor");
+
+    _pressurePlateMat.SetColor(colorProperty, untriggeredColor);
+    currWeight = 0.0f;
   }
 
   // Update is called once per frame
@@ -49,29 +55,38 @@ public class PressurePlate : MonoBehaviour
       if (_trigger) _animationTime += Time.deltaTime;
       else _animationTime -= Time.deltaTime;
       _pressurePlateMat.SetColor(colorProperty, Color.Lerp(untriggeredColor, triggeredColor, evaluatedTime));
-      transform.localPosition = Vector3.Lerp(_localPos, _localPos + Vector3.down*0.5f, evaluatedTime);
+      transform.position = Vector3.Lerp(_localPos, _localPos + Vector3.down*0.5f, evaluatedTime);
 
       for (int g=0; g < gates.Length; g++)
-        gates[g].localPosition = Vector3.Lerp(_originalPos[g], _originalPos[g] + positionOffset, evaluatedTime);
+        gates[g].position = Vector3.Lerp(_originalPos[g], _originalPos[g] + positionOffset, evaluatedTime);
 
     }
   }
 
   void OnTriggerEnter(Collider collider)
   {
-    if ((acceptedLayer & 1 << collider.gameObject.layer) == 1 << collider.gameObject.layer && !_trigger)
+    if ((acceptedLayer & 1 << collider.gameObject.layer) == 1 << collider.gameObject.layer)
     {
-      _trigger = true;
-      disableCollider.enabled = false;
+      currWeight += 0.5f;
+      if (currWeight >= targetWeight)
+      {
+        disableCollider.enabled = false;
+        _trigger = true;
+      }
     }
   }
 
   void OnTriggerExit(Collider collider)
   {
-    if ((acceptedLayer & 1 << collider.gameObject.layer) == 1 << collider.gameObject.layer && _trigger)
+    if ((acceptedLayer & 1 << collider.gameObject.layer) == 1 << collider.gameObject.layer)
     {
-      _trigger = false;
-      disableCollider.enabled = true;
+      print($"In: {collider.name}");
+      currWeight -= 0.5f; 
+      if (currWeight < targetWeight)
+      {
+        disableCollider.enabled = true;
+        _trigger = false;
+      }
     }
   }
 }
