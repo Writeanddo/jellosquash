@@ -12,7 +12,6 @@ public class BgMusic : MonoBehaviour
   public float fadeInVolume;
   public float fadeOutVolume;
 
-
   void Awake() => DontDestroyOnLoad(this.gameObject);
 
   void Start()
@@ -23,15 +22,16 @@ public class BgMusic : MonoBehaviour
     audioSource.loop = false;  
     audioSource.Play();
   }
-
-  void Update() // when press play
+  public void GameStartMusic() //when press play
   {
-    if(Input.GetKey("space"))
-    {
-      StartCoroutine(GameStart());
-    }
+    StartCoroutine(GameStart());
   }
-  IEnumerator GameStart()
+
+  public void GameExitMusic() //when press play
+  {
+    StartCoroutine(GameExit());
+  }
+  IEnumerator GameStart() //in game
   {
     //press play previous fade out, now another fade in
     StartCoroutine(FadeMixer.StartFade(mixer, "vol", fadeDuration, fadeOutVolume));
@@ -43,4 +43,19 @@ public class BgMusic : MonoBehaviour
     audioSource.loop = true;
     audioSource.Play();
   }
+
+  IEnumerator GameExit() // in menu
+  {
+    //lowers game theme and change back to menu theme higher
+    StartCoroutine(FadeMixer.StartFade(mixer, "vol", fadeDuration, fadeOutVolume));
+
+    yield return new WaitForSeconds(fadeDuration);
+
+    audioSource.clip = gameMenu;
+    StartCoroutine(FadeMixer.StartFade(mixer, "vol", fadeDuration, fadeInVolume));
+    audioSource.loop = true;
+    audioSource.Play();
+  }
+
+
 }

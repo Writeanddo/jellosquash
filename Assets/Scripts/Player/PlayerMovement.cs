@@ -40,7 +40,6 @@ public partial class Player
 
   private void MovementUpdate()
   {
-    // Cursor.lockState = CursorLockMode.Locked;
     foreach (Transform groundCheck in groundChecks)
     {
       if (Physics.CheckSphere(groundCheck.position, groundDistance, groundLayer))
