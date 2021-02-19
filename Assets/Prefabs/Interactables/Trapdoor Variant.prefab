@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4875373579451322015}
   - component: {fileID: 6490495996321952133}
   - component: {fileID: 8143609977955066665}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,7 +25,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 529844981863586875}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.000000013038513, y: -1, z: -0.000000001993072, w: 0.00000055150383}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 6
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e56e26324579ff43a78ec43b24fe8ab, type: 2}
   m_sharedMaterial: {fileID: -5441897030128672513, guid: 2e56e26324579ff43a78ec43b24fe8ab, type: 2}
@@ -169,6 +169,19 @@ MonoBehaviour:
   m_maskType: 0
   _SortingLayerID: 0
   _SortingOrder: 0
+--- !u!65 &169424505272354907
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6635902941146081801}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.581364, y: 0.8326245, z: 4.4313297}
+  m_Center: {x: -3.21329e-10, y: 0.3230174, z: -0.0024116833}
 --- !u!114 &1405237706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,10 +198,11 @@ MonoBehaviour:
   ruptured: {fileID: 1445714038953326456, guid: cdb0a452d70b19e42a43d187a4fb0c11, type: 3}
   playerLayer:
     serializedVersion: 2
-    m_Bits: 0
-  minimumMass: 0
-  dropJellyCount: 0
+    m_Bits: 8
+  minimumMass: 6
+  dropJellyCount: 3
   disableCollider: {fileID: 6296160362340546130}
+  massText: {fileID: 8143609977955066665}
 --- !u!65 &6296160362340546130
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -214,7 +228,7 @@ GameObject:
   - component: {fileID: 6143312305328261887}
   - component: {fileID: 6895872233353274174}
   - component: {fileID: 8930854586633461278}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -381,6 +395,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -720953202439504190, guid: a68b1801f7fafb649b6ed6f3ad20e650, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: -637441797809030417, guid: a68b1801f7fafb649b6ed6f3ad20e650, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -402,12 +420,20 @@ PrefabInstance:
       value: Trapdoor Variant
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a68b1801f7fafb649b6ed6f3ad20e650, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a68b1801f7fafb649b6ed6f3ad20e650, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a68b1801f7fafb649b6ed6f3ad20e650, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7701634970645427269, guid: a68b1801f7fafb649b6ed6f3ad20e650, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a68b1801f7fafb649b6ed6f3ad20e650, type: 3}

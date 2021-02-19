@@ -52,7 +52,7 @@ public class Enemy : MonoBehaviour
     {
       if (_itemExists)
       {
-        item.transform.position = Vector3.Lerp(item.transform.position, transform.position + transform.up*transform.localScale.y + transform.up*offset, Time.deltaTime*followSpeed);
+        item.transform.position = Vector3.Lerp(item.transform.position, transform.position + transform.up*1.5f*transform.localScale.y + transform.up*offset, Time.deltaTime*followSpeed);
         item.transform.Rotate(Vector3.up, Time.deltaTime*rotationSpeed);
       }
 

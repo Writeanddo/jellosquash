@@ -37,7 +37,7 @@ public partial class Player : MonoBehaviour
 
     if (_itemExists)
     {
-      item.transform.position = Vector3.Lerp(item.transform.position, transform.position + transform.up*transform.localScale.y + transform.up*_itemOffset, Time.deltaTime*_itemFollowSpeed);
+      item.transform.position = Vector3.Lerp(item.transform.position, transform.position + transform.up*1.5f*transform.localScale.y + transform.up*_itemOffset, Time.deltaTime*_itemFollowSpeed);
       item.transform.Rotate(Vector3.up, Time.deltaTime*_rotationSpeed);
     }
   }
@@ -46,9 +46,12 @@ public partial class Player : MonoBehaviour
   {
     if ((pickupLayer & 1 << collider.gameObject.layer) == 1 << collider.gameObject.layer)
     {
-      _localScale += collider.transform.localScale;
-      _animationTime = 0.0f;
-      Destroy(collider.gameObject);
+      if (collider.isTrigger == true)
+      {
+        _localScale += collider.transform.localScale;
+        _animationTime = 0.0f;
+        Destroy(collider.gameObject);
+      }
     }
 
     if ((enemyDieLayer & 1 << collider.gameObject.layer) == 1 << collider.gameObject.layer)

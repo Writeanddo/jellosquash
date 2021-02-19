@@ -1,5 +1,7 @@
 using UnityEngine;
 using TMPro;
+using Cinemachine;
+
 public class SlimeUI : MonoBehaviour
 {
   public TextMeshProUGUI massText;
@@ -18,8 +20,10 @@ public class SlimeUI : MonoBehaviour
 
     transform.localPosition = new Vector3(
       transform.localPosition.x,
-      2/transform.parent.localScale.y + 1.0f,
+      10/transform.parent.localScale.y + 1.0f,
       transform.localPosition.z);
     massText.text = transform.parent.localScale.x.ToString("f1");
+
+    transform.LookAt(Camera.main.transform);
   }
 }

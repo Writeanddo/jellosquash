@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 
 public class TrapDoor : MonoBehaviour
 {
@@ -11,10 +12,17 @@ public class TrapDoor : MonoBehaviour
   public int dropJellyCount;
   public BoxCollider disableCollider;
 
+  public TextMeshPro massText;
+
+  void Start() => massText.text = minimumMass.ToString("f1");
+
+  void Update() => massText.gameObject.transform.parent.transform.LookAt(Camera.main.transform);
+
   void OnTriggerEnter(Collider collider)
   {
     if ((playerLayer & 1 << collider.gameObject.layer) == 1 << collider.gameObject.layer)
     {
+      print("Player Detected");
       Player player = collider.GetComponent<Player>();
       if (player.attack)
       {
