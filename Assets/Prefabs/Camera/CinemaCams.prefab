@@ -204,7 +204,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4075239648071498795
 Transform:
   m_ObjectHideFlags: 0
@@ -235,6 +235,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuCam: {fileID: 4075239648423397438}
   creditCam: {fileID: 4075239648239516531}
+  menuPanel: {fileID: 0}
+  escape: 27
 --- !u!1 &4075239648239516528
 GameObject:
   m_ObjectHideFlags: 0
