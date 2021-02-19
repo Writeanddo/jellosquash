@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
   {
     CheckLoadedScenes();
     StartGame();
+    RepositionPlayer();
   }
 
   private void CheckLoadedScenes()

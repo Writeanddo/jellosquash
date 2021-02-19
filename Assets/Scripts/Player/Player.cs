@@ -4,6 +4,7 @@ public partial class Player : MonoBehaviour
 {
   public static bool dead = true;
   public static bool move = false;
+
   void Start()
   {
     move = false;
@@ -14,7 +15,8 @@ public partial class Player : MonoBehaviour
 
   void Update()
   {
-    MovementUpdate();
+    if (move)
+      MovementUpdate();
     SizeUpdate();
   }
 
