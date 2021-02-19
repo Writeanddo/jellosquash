@@ -39,6 +39,7 @@ public class UICinematic : MonoBehaviour
   }
   public IEnumerator QuitGame() // escape
   {
+    credit.SetActive(false);
     // move to start menu 
     Player.move = false;
     Cursor.visible = true;
@@ -58,6 +59,7 @@ public class UICinematic : MonoBehaviour
   {
     if(Input.GetKeyDown(escape))
     {
+      //reset all scenes
       if(BackToMenu)
       {
         music.GameExitMusic();

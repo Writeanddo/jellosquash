@@ -1,12 +1,13 @@
 using UnityEngine;
-
+using TMPro;
 public partial class Player : MonoBehaviour
 {
   public static bool dead = true;
   public static bool move = false;
-
+  public TextMeshProUGUI status;
   void Start()
   {
+    status.text = "";
     move = false;
     dead = false;
     MovementInit();
@@ -15,9 +16,18 @@ public partial class Player : MonoBehaviour
 
   void Update()
   {
-    if (move)
+    if (move || !dead)
       MovementUpdate();
     SizeUpdate();
+    if(dead)
+    {
+      status.text = "Game Over. Press R to restart. Press esc to quit game";
+      transform.LookAt(Camera.main.transform);
+    }
+    // if(win)
+    // {
+    //   status.text = "Victory! Press esc to quit the game."
+    // }
   }
 
   public void RuptureDropJelly(int totalMassLossCount)
