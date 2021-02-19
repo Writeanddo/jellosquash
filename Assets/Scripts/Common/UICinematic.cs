@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 using Cinemachine;
 public class UICinematic : MonoBehaviour
 {
@@ -8,24 +9,36 @@ public class UICinematic : MonoBehaviour
     // Start is called before the first frame update
   public GameObject menuPanel;
   public KeyCode escape = KeyCode.Escape;
-
+  public GameObject credit;
   public static bool inGame;
-
+  public BgMusic music;
+  public bool BackToMenu;
   public void PressPlay()
   {
+    BackToMenu = true;
     Player.move = true;
     Cursor.visible = false;
     inGame = true;
     menuCam.Priority = 9;
     creditCam.Priority = 8;
   }
-  
+
   public void PressCredit()
   {
     menuCam.Priority = 7;
   }
+  public void CreditOn() => StartCoroutine(CreditActive());
+  IEnumerator CreditActive()
+  {
+    yield return new WaitForSeconds(2f);
+    credit.SetActive(true);
+  }
 
-  public void QuitGame() // escape
+  public void BackButton()
+  {
+    StartCoroutine(QuitGame());
+  }
+  public IEnumerator QuitGame() // escape
   {
     // move to start menu 
     Player.move = false;
@@ -33,23 +46,25 @@ public class UICinematic : MonoBehaviour
     inGame = false;
     menuCam.Priority = 12;
     creditCam.Priority = 11;
+    yield return new WaitForSeconds(2f);
     menuPanel.SetActive(true);
-    // switch music back to menuMusic
   }
-
   public void QuitApp()
   {
     print("Quit Game");
     Application.Quit();
   }
-  //test
+  
   void Update()
   {
-    if(Input.GetKey(escape))
+    if(Input.GetKeyDown(escape))
     {
-      //save checkpoint
-      // print("Quit!");
-      QuitGame();
+        if(BackToMenu)
+      {
+        music.GameExitMusic();
+      }
+      BackToMenu = false;
+      StartCoroutine(QuitGame());
     }
 
     if (inGame) Cursor.lockState = CursorLockMode.Locked;

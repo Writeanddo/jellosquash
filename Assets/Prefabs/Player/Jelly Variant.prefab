@@ -655,7 +655,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 13d14ee666d66f64080780413d6760ff, type: 2}
     - target: {fileID: 919132149155446097, guid: 2fa8f41292b135545ae5db6dc95f7000, type: 3}
       propertyPath: m_Name
-      value: Jelly Variant
+      value: Jelly
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2fa8f41292b135545ae5db6dc95f7000, type: 3}
       propertyPath: m_Layer

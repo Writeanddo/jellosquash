@@ -237,6 +237,9 @@ MonoBehaviour:
   creditCam: {fileID: 4075239648239516531}
   menuPanel: {fileID: 0}
   escape: 27
+  credit: {fileID: 0}
+  music: {fileID: 0}
+  BackToMenu: 0
 --- !u!1 &4075239648239516528
 GameObject:
   m_ObjectHideFlags: 0
