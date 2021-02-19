@@ -79,6 +79,7 @@ public partial class Player : MonoBehaviour
         if (!enemy.dead)
         {
           _velocity += enemy.transform.forward*knockbackForce + enemy.transform.up*(knockupForce-gravity*0.5f);
+          SoundFX.source.PlayOneShot(takenDamage);
           if (_localScale.x <= 1.0f) dead = true;
           else if (_localScale.x > 1.0f) DropJelly(enemy.transform.forward);
         }

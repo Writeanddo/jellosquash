@@ -29,6 +29,12 @@ public partial class Player
 
   public bool attack = false;
 
+  public AudioClip smash;
+  public AudioClip jump;
+  public AudioClip takenDamage;
+  public AudioClip pickup;
+  public AudioClip gainMass;
+
   private void MovementInit(){}
 
   private void MovementUpdate()
@@ -70,12 +76,14 @@ public partial class Player
     {
       attack = false;
       _velocity.y = Mathf.Sqrt(jumpHeight * -2.0f * gravity);
+      SoundFX.source.PlayOneShot(jump);
     }
 
     if (Input.GetButtonDown("Fire1") && !_isGrounded)
     {
       attack = true;
       _velocity.y = -Mathf.Sqrt(jumpHeight * -4.0f * gravity);
+      SoundFX.source.PlayOneShot(smash);
     }
 
     _velocity.y += gravity * Time.deltaTime;

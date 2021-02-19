@@ -48,7 +48,7 @@ MonoBehaviour:
   gameMenu: {fileID: 8300000, guid: 98adc1865e4494c49ae9fda28e70cf35, type: 3}
   audioSource: {fileID: 5369652011028261632}
   mixer: {fileID: 24100000, guid: d70c7faede63822419ad2cd1e3ebda40, type: 2}
-  fadeDuration: 10
+  fadeDuration: 5
   fadeInVolume: 1
   fadeOutVolume: 0
 --- !u!82 &5369652011028261632
