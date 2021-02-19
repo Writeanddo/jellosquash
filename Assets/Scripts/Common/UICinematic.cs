@@ -43,6 +43,7 @@ public class UICinematic : MonoBehaviour
     if(Input.GetKey(escape))
     {
       //save checkpoint
+      // print("Quit!");
       QuitGame();
     }
   }

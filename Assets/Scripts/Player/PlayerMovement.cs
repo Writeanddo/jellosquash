@@ -33,8 +33,6 @@ public partial class Player
 
   private void MovementUpdate()
   {
-    if(move)
-    {
     // Cursor.lockState = CursorLockMode.Locked;
     foreach (Transform groundCheck in groundChecks)
     {
@@ -85,7 +83,6 @@ public partial class Player
       controller.Move(_velocity * Time.deltaTime);
 
     _velocity *= 0.98f;
-    }
   }
 
   public IEnumerator SquashVFX()
