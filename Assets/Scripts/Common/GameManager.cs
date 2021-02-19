@@ -7,10 +7,16 @@ public class GameManager : MonoBehaviour
   public string[] scenes;
   private bool[] _isLoaded;
   List<AsyncOperation> scenesToLoad = new List<AsyncOperation>();
+  public string startScene;
+
+  public Transform[] spawnLocations;
+  public GameObject player;
+  public static string currScene;
 
   void Awake()
   {
     _isLoaded = new bool[scenes.Length];
+    currScene = startScene;
     DontDestroyOnLoad(this);
   }
 
@@ -41,6 +47,18 @@ public class GameManager : MonoBehaviour
       {
         scenesToLoad.Add(SceneManager.LoadSceneAsync(scenes[s], LoadSceneMode.Additive));
         _isLoaded[s] = true;
+      }
+    }
+  }
+
+  public void RepositionPlayer()
+  {
+    for (int s=0; s < spawnLocations.Length; s++)
+    {
+      if (spawnLocations[s].name == currScene)
+      {
+        player.transform.position = spawnLocations[s].position;
+        break;
       }
     }
   }
