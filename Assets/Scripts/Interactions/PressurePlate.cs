@@ -28,7 +28,7 @@ public class PressurePlate : MonoBehaviour
 
   private Material _pressurePlateMat;
   private int colorProperty;
-
+  public AudioClip pressurePlate;
   // Start is called before the first frame update
   void Start()
   {
@@ -72,6 +72,7 @@ public class PressurePlate : MonoBehaviour
       {
         disableCollider.enabled = false;
         _trigger = true;
+        SoundFX.source.PlayOneShot(pressurePlate);
       }
     }
   }

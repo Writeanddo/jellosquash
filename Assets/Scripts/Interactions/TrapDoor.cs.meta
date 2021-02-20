@@ -3,7 +3,12 @@ guid: a7151150c8f11fb43b0e3397213f495a
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - trapDoor: {instanceID: 0}
+  - ruptured: {instanceID: 0}
+  - disableCollider: {instanceID: 0}
+  - massText: {instanceID: 0}
+  - Trapdoor: {fileID: 8300000, guid: 6362093df88134d439c7c68235562596, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

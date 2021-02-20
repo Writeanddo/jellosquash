@@ -13,6 +13,7 @@ public class TrapDoor : MonoBehaviour
   public BoxCollider disableCollider;
 
   public TextMeshPro massText;
+  public AudioClip Trapdoor;
 
   void Start() => massText.text = minimumMass.ToString("f1");
   void Update() => massText.gameObject.transform.parent.transform.LookAt(Camera.main.transform);
@@ -29,6 +30,7 @@ public class TrapDoor : MonoBehaviour
           DestroyTrapDoor();
           player.RuptureDropJelly(dropJellyCount);
           player.DestroyItem();
+          SoundFX.source.PlayOneShot(Trapdoor);
         }
       }
     }

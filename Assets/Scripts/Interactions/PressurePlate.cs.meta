@@ -3,7 +3,9 @@ guid: 39e69412d054b084485ff2a8570fdd1f
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - disableCollider: {instanceID: 0}
+  - pressurePlate: {fileID: 8300000, guid: 0a6c8f7ea30ef764ba37e4e8ef8b489d, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
