@@ -9,5 +9,6 @@ public class SoundFX : MonoBehaviour
   void Start()
   {
     source = transform.GetComponent<AudioSource>();
+    DontDestroyOnLoad(this);
   }
 }

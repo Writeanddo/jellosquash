@@ -322,7 +322,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  squashedDuration: 0.4
+  squashedDuration: 1
   item: {fileID: 0}
   offset: 2
   followSpeed: 10
