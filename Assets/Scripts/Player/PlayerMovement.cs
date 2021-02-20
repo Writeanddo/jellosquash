@@ -63,7 +63,7 @@ public partial class Player
 
     Vector3 direction = new Vector3(horizontal, 0, vertical).normalized;
 
-    if (direction.magnitude >= 0.1)
+    if (direction.magnitude >= 0.1 && !dead)
     {
       float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cameraTransform.eulerAngles.y;
       float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref _turnSmoothVelocity, turnSmoothTime);
@@ -73,14 +73,14 @@ public partial class Player
       controller.Move(moveDirection.normalized * speed * Time.deltaTime);
     }
 
-    if (Input.GetButtonDown("Jump") && _isGrounded)
+    if (Input.GetButtonDown("Jump") && _isGrounded && !dead)
     {
       attack = false;
       _velocity.y = Mathf.Sqrt(jumpHeight * -2.0f * gravity);
       SoundFX.source.PlayOneShot(jump);
     }
 
-    if (Input.GetButtonDown("Fire1") && !_isGrounded)
+    if (Input.GetButtonDown("Fire1") && !_isGrounded && !dead)
     {
       attack = true;
       _velocity.y = -Mathf.Sqrt(jumpHeight * -4.0f * gravity);

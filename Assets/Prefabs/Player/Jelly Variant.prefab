@@ -527,7 +527,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6543634184004670786}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8881665111647546250}
@@ -607,6 +607,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   status: {fileID: 548788011}
+  gameManager: {fileID: 0}
+  cinemachineFreeLook: {fileID: 0}
+  defaultRadius:
+  - 25
+  - 20
+  - 10
+  defaultHeight:
+  - 20
+  - 10
+  - 5
   controller: {fileID: 538540298}
   speed: 20
   cameraTransform: {fileID: 0}
@@ -622,7 +632,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 887
   groundDistance: 0.2
-  jumpHeight: 7
+  jumpHeight: 8
   jumpAnimation:
     serializedVersion: 2
     m_Curve:

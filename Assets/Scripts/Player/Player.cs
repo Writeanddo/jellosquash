@@ -14,6 +14,7 @@ public partial class Player : MonoBehaviour
   public CinemachineFreeLook cinemachineFreeLook;
 
   public float[] defaultRadius = new float[3] {25.0f, 20.0f, 10.0f};
+  public float[] defaultHeight = new float[3] {20.0f, 10.0f, 5.0f};
 
   void Start()
   {
@@ -26,13 +27,17 @@ public partial class Player : MonoBehaviour
 
   void Update()
   {
-    if (move && !dead)
+    if (move)
       MovementUpdate();
     SizeUpdate();
 
     cinemachineFreeLook.m_Orbits[0].m_Radius = defaultRadius[0] + transform.localScale.x;
-    cinemachineFreeLook.m_Orbits[1].m_Radius = defaultRadius[1] + transform.localScale.x;
-    cinemachineFreeLook.m_Orbits[2].m_Radius = defaultRadius[2] + transform.localScale.x;
+    cinemachineFreeLook.m_Orbits[1].m_Radius = defaultRadius[1] + transform.localScale.x*2.0f;
+    cinemachineFreeLook.m_Orbits[2].m_Radius = defaultRadius[2] + transform.localScale.x*1.5f;
+
+    cinemachineFreeLook.m_Orbits[0].m_Height = defaultHeight[0] + transform.localScale.y*3.0f;
+    cinemachineFreeLook.m_Orbits[1].m_Height = defaultHeight[1] + transform.localScale.y/2.0f;
+    cinemachineFreeLook.m_Orbits[2].m_Height = Mathf.Max(1.0f, defaultHeight[2] - transform.localScale.y*1.5f);
 
     if(dead)
     {
@@ -87,7 +92,7 @@ public partial class Player : MonoBehaviour
 
   private void DropJelly(Vector3 direction)
   {
-    if (transform.localScale.y > 1.0f)
+    if (_localScale.y > 1.0f)
     {
       GameObject littleJelly = Instantiate(jellyPrefab,
         transform.position + direction*transform.localScale.z + direction*spawnOffset + transform.up*spawnOffset,

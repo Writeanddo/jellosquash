@@ -14,6 +14,7 @@ public class SlimeUI : MonoBehaviour
   {
     if(Player.dead) massText.enabled = false;
     else massText.enabled = true;
+
     transform.localScale = new Vector3(
       1.0f/transform.parent.localScale.x,
       1.0f/transform.parent.localScale.y,
