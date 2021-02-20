@@ -14,7 +14,7 @@ public class FinalDoor : MonoBehaviour
   void Update()
   {
     currentTime += Time.deltaTime*moveSpeed;
-    SoundFX.source.PlayOneShot(rockMoving);
+    // SoundFX.source.PlayOneShot(rockMoving);
     transform.position = Vector3.Lerp(transform.position, transform.position + new Vector3(-moveOut,0 ,0),currentTime);
     transform.position = Vector3.Lerp(transform.position, transform.position + new Vector3(0, 0, moveSideways),currentTime);
   }
