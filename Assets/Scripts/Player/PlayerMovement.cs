@@ -41,7 +41,7 @@ public partial class Player
   {
     foreach (Transform groundCheck in groundChecks)
     {
-      if (Physics.CheckSphere(groundCheck.position, groundDistance, groundLayer))
+      if (Physics.CheckSphere(groundCheck.position, groundDistance+transform.localScale.x/10.0f, groundLayer))
       {
         _isGrounded = true;
         if (attack)

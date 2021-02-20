@@ -19,7 +19,7 @@ public class BgMusic : MonoBehaviour
     // game launch fade in
     audioSource.clip = gameMenu;
     StartCoroutine(FadeMixer.StartFade(mixer, "vol", fadeDuration, fadeInVolume));
-    audioSource.loop = false;  
+    audioSource.loop = true;  
     audioSource.Play();
   }
   public void GameStartMusic() //when press play
