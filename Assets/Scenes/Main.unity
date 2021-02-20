@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2560.913, g: 1741.9062, b: 1487.9355, a: 1}
+  m_IndirectSpecularColor: {r: 2207.8408, g: 1405.1455, b: 1045.669, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -466,7 +466,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: d4d8aa9638dc53441bac5e427bdec7bd, type: 2}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -647,6 +647,26 @@ PrefabInstance:
     - target: {fileID: 1471545582, guid: 6e2fe49231d4f724e9a6631b5574272a, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 1471545583, guid: 6e2fe49231d4f724e9a6631b5574272a, type: 3}
+      propertyPath: m_text
+      value: 'PROGRAMMING & MODELLING:
+
+        NIXON, VINCEXODUS, DRAKASHX21
+
+
+        VFX
+        : NXON, VINCEXODUS
+
+
+        LEVEL DESIGN & MODELLING: ANDREW TAN
+
+
+        MUSIC
+        : NIXON
+
+
+        ADDITIONAL SOUND EFFECTS FROM WWW.ZAPSPLAT.COM'
       objectReference: {fileID: 0}
     - target: {fileID: 664528396665175688, guid: 6e2fe49231d4f724e9a6631b5574272a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -1522,7 +1542,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3066604839038607227, guid: 40dc031698349574c917a31edfb1a559, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.13434187
+      value: -0.13434188
       objectReference: {fileID: 0}
     - target: {fileID: 3066604839158534853, guid: 40dc031698349574c917a31edfb1a559, type: 3}
       propertyPath: m_LocalPosition.x
