@@ -341,8 +341,8 @@ MonoBehaviour:
   - Level1
   - Level2
   - Level3
-  startScene: Level3
-  startSize: 3
+  startScene: Level1
+  startSize: 2
   spawnLocations:
   - {fileID: 585982646}
   - {fileID: 676079586}
