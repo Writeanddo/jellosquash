@@ -203,6 +203,7 @@ MonoBehaviour:
   dropJellyCount: 3
   disableCollider: {fileID: 6296160362340546130}
   massText: {fileID: 8143609977955066665}
+  Trapdoor: {fileID: 8300000, guid: 6362093df88134d439c7c68235562596, type: 3}
 --- !u!65 &6296160362340546130
 BoxCollider:
   m_ObjectHideFlags: 0

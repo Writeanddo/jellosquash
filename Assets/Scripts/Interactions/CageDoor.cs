@@ -30,7 +30,6 @@ public class CageDoor : MonoBehaviour
       if (_trigger) _animationTime += Time.deltaTime;
       else _animationTime -= Time.deltaTime;
       door.transform.localRotation = Quaternion.Lerp(_localRotation, targetRotation, evaluatedTime);
-      SoundFX.source.PlayOneShot(cageOpen);
     }
   }
 
@@ -42,6 +41,7 @@ public class CageDoor : MonoBehaviour
       {
         disableCollider.enabled = false;
         _trigger = true;
+        SoundFX.source.PlayOneShot(cageOpen);
       }
     }
   }
@@ -52,6 +52,10 @@ public class CageDoor : MonoBehaviour
     {
       _trigger = false;
       disableCollider.enabled = true;
+      if (collider.gameObject.GetComponent<Player>().item != null)
+      {
+        SoundFX.source.PlayOneShot(cageOpen);
+      }
     }
   }
 }

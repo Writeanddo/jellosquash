@@ -330,6 +330,7 @@ MonoBehaviour:
   triggeredColor: {r: 0, g: 4, b: 0, a: 0}
   targetWeight: 0.5
   currWeight: 0
+  pressurePlate: {fileID: 8300000, guid: 0a6c8f7ea30ef764ba37e4e8ef8b489d, type: 3}
 --- !u!65 &1182275609099982522
 BoxCollider:
   m_ObjectHideFlags: 0

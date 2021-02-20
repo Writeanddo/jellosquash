@@ -81,7 +81,6 @@ public class PressurePlate : MonoBehaviour
   {
     if ((acceptedLayer & 1 << collider.gameObject.layer) == 1 << collider.gameObject.layer)
     {
-      print($"In: {collider.name}");
       currWeight -= 0.5f; 
       if (currWeight < targetWeight)
       {

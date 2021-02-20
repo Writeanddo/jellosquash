@@ -48,6 +48,7 @@ public partial class Player
         {
           StartCoroutine(SquashVFX());
           DropJelly(transform.forward);
+          SoundFX.source.PlayOneShot(smash);
         }
 
         attack = false;
@@ -83,7 +84,6 @@ public partial class Player
     {
       attack = true;
       _velocity.y = -Mathf.Sqrt(jumpHeight * -4.0f * gravity);
-      SoundFX.source.PlayOneShot(smash);
     }
 
     _velocity.y += gravity * Time.deltaTime;
