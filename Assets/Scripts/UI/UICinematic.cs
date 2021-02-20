@@ -24,7 +24,7 @@ public class UICinematic : MonoBehaviour
 
   public void PressCredit()
   {
-    menuCam.Priority = 7;
+    creditCam.Priority = 20;
   }
   public void CreditOn() => StartCoroutine(CreditActive());
   IEnumerator CreditActive()
