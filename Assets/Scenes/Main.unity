@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2556.1016, g: 1714.6836, b: 1439.9199, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -329,8 +329,8 @@ MonoBehaviour:
   - Level1
   - Level2
   - Level3
-  startScene: Level3
-  startSize: 4
+  startScene: Level1
+  startSize: 1
   spawnLocations:
   - {fileID: 585982646}
   - {fileID: 676079586}
@@ -1811,10 +1811,6 @@ PrefabInstance:
       propertyPath: OutputAudioMixerGroup
       value: 
       objectReference: {fileID: 24300002, guid: d4d8aa9638dc53441bac5e427bdec7bd, type: 2}
-    - target: {fileID: 901780674734559604, guid: 042901243337d1f45a73e9e17d10b494, type: 3}
-      propertyPath: speed
-      value: 40
-      objectReference: {fileID: 0}
     - target: {fileID: 901780674734559604, guid: 042901243337d1f45a73e9e17d10b494, type: 3}
       propertyPath: gameManager
       value: 
