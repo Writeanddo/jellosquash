@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2552.412, g: 1710.3145, b: 1435.0938, a: 1}
+  m_IndirectSpecularColor: {r: 2552.42, g: 1710.3105, b: 1435.1133, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: 2cfa59e257e6deb449fba815b428f2a1, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: a123bb5c91266fc42812666e0123e45f, type: 2}
 --- !u!1001 &11384782
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -287,8 +287,8 @@ GameObject:
   m_Name: CastleWall (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &13536530
 Transform:
@@ -708,8 +708,8 @@ GameObject:
   m_Name: CastleWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!65 &37663667
 BoxCollider:
@@ -785,7 +785,7 @@ Transform:
   m_LocalScale: {x: 3.358361, y: 7.977235, z: 67.73279}
   m_Children: []
   m_Father: {fileID: 1040362883584147625}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &42743720
 PrefabInstance:
@@ -968,7 +968,7 @@ GameObject:
   m_Name: Gound1 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &43955723
@@ -2741,31 +2741,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5720428136723152847, guid: 2e7704ee8306eed4187a31d6d8a87227, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.89039314
+      value: 0.9238797
       objectReference: {fileID: 0}
     - target: {fileID: 5720428136723152847, guid: 2e7704ee8306eed4187a31d6d8a87227, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.046353005
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5720428136723152847, guid: 2e7704ee8306eed4187a31d6d8a87227, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.43825302
+      value: -0.38268322
       objectReference: {fileID: 0}
     - target: {fileID: 5720428136723152847, guid: 2e7704ee8306eed4187a31d6d8a87227, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.113955095
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5720428136723152847, guid: 2e7704ee8306eed4187a31d6d8a87227, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -10.511
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5720428136723152847, guid: 2e7704ee8306eed4187a31d6d8a87227, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -51.537
+      value: -45
       objectReference: {fileID: 0}
     - target: {fileID: 5720428136723152847, guid: 2e7704ee8306eed4187a31d6d8a87227, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -9.501
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e7704ee8306eed4187a31d6d8a87227, type: 3}
@@ -2863,7 +2863,7 @@ GameObject:
   m_Name: Gound1 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &202287369
@@ -3914,7 +3914,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5108620758487978504, guid: 2ed57bb81319ac74482e7472350952f3, type: 3}
       propertyPath: m_RootOrder
-      value: 38
+      value: 37
       objectReference: {fileID: 0}
     - target: {fileID: 5108620758487978504, guid: 2ed57bb81319ac74482e7472350952f3, type: 3}
       propertyPath: m_LocalScale.x
@@ -4724,7 +4724,7 @@ GameObject:
   m_Name: Gound1 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &449622935
@@ -5210,6 +5210,68 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 379268181414669997, guid: 839b8c3d18e9618449bb4ffad64a6e55, type: 3}
   m_PrefabInstance: {fileID: 466933126}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &481743721
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 757678898}
+    m_Modifications:
+    - target: {fileID: 3306750073384689067, guid: 8e13dac2e91a45f4c8764f1ef2bb2116, type: 3}
+      propertyPath: m_RootOrder
+      value: 156
+      objectReference: {fileID: 0}
+    - target: {fileID: 3306750073384689067, guid: 8e13dac2e91a45f4c8764f1ef2bb2116, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 105.8898
+      objectReference: {fileID: 0}
+    - target: {fileID: 3306750073384689067, guid: 8e13dac2e91a45f4c8764f1ef2bb2116, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -13.352386
+      objectReference: {fileID: 0}
+    - target: {fileID: 3306750073384689067, guid: 8e13dac2e91a45f4c8764f1ef2bb2116, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -80.79763
+      objectReference: {fileID: 0}
+    - target: {fileID: 3306750073384689067, guid: 8e13dac2e91a45f4c8764f1ef2bb2116, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99144495
+      objectReference: {fileID: 0}
+    - target: {fileID: 3306750073384689067, guid: 8e13dac2e91a45f4c8764f1ef2bb2116, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.13052595
+      objectReference: {fileID: 0}
+    - target: {fileID: 3306750073384689067, guid: 8e13dac2e91a45f4c8764f1ef2bb2116, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3306750073384689067, guid: 8e13dac2e91a45f4c8764f1ef2bb2116, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3306750073384689067, guid: 8e13dac2e91a45f4c8764f1ef2bb2116, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3306750073384689067, guid: 8e13dac2e91a45f4c8764f1ef2bb2116, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3306750073384689067, guid: 8e13dac2e91a45f4c8764f1ef2bb2116, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7191236920085386217, guid: 8e13dac2e91a45f4c8764f1ef2bb2116, type: 3}
+      propertyPath: m_Name
+      value: SmallRock.005 (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8e13dac2e91a45f4c8764f1ef2bb2116, type: 3}
+--- !u!4 &481743722 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3306750073384689067, guid: 8e13dac2e91a45f4c8764f1ef2bb2116, type: 3}
+  m_PrefabInstance: {fileID: 481743721}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &491747757
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5397,7 +5459,7 @@ GameObject:
   m_Name: Gound1 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &495929609
@@ -5588,7 +5650,7 @@ GameObject:
   m_Name: Gound1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &513541616
@@ -6226,7 +6288,7 @@ GameObject:
   m_Name: Gound1 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &563596299
@@ -6307,7 +6369,7 @@ GameObject:
   m_Name: Gound1 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &570074859
@@ -6677,8 +6739,8 @@ GameObject:
   m_Name: CastleWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!65 &587733322
 BoxCollider:
@@ -7794,7 +7856,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5108620758487978504, guid: 2ed57bb81319ac74482e7472350952f3, type: 3}
       propertyPath: m_RootOrder
-      value: 35
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 5108620758487978504, guid: 2ed57bb81319ac74482e7472350952f3, type: 3}
       propertyPath: m_LocalScale.x
@@ -8535,6 +8597,7 @@ Transform:
   - {fileID: 1360667414}
   - {fileID: 1475361365}
   - {fileID: 11384783}
+  - {fileID: 481743722}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9470,7 +9533,7 @@ GameObject:
   m_Name: Gound1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &831010382
@@ -10334,6 +10397,14 @@ PrefabInstance:
     - target: {fileID: 5597595211391600818, guid: 2ed57bb81319ac74482e7472350952f3, type: 3}
       propertyPath: m_Name
       value: DungeonGate Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 5597595211391600818, guid: 2ed57bb81319ac74482e7472350952f3, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5597595211391600818, guid: 2ed57bb81319ac74482e7472350952f3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ed57bb81319ac74482e7472350952f3, type: 3}
@@ -11903,7 +11974,7 @@ GameObject:
   m_Name: Gound1 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &1038044042
@@ -13681,7 +13752,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5108620758487978504, guid: 2ed57bb81319ac74482e7472350952f3, type: 3}
       propertyPath: m_RootOrder
-      value: 39
+      value: 38
       objectReference: {fileID: 0}
     - target: {fileID: 5108620758487978504, guid: 2ed57bb81319ac74482e7472350952f3, type: 3}
       propertyPath: m_LocalScale.x
@@ -14105,8 +14176,8 @@ GameObject:
   m_Name: CastleWall (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &1233864566
 Transform:
@@ -14578,8 +14649,8 @@ GameObject:
   m_Name: CastleWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!65 &1286176541
 BoxCollider:
@@ -15755,7 +15826,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5108620758487978504, guid: 2ed57bb81319ac74482e7472350952f3, type: 3}
       propertyPath: m_RootOrder
-      value: 36
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 5108620758487978504, guid: 2ed57bb81319ac74482e7472350952f3, type: 3}
       propertyPath: m_LocalScale.x
@@ -16715,8 +16786,8 @@ GameObject:
   m_Name: CastleWall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &1507572369
 Transform:
@@ -16730,7 +16801,7 @@ Transform:
   m_LocalScale: {x: 3.358361, y: 8.834026, z: 81.184525}
   m_Children: []
   m_Father: {fileID: 1040362883584147625}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 2.441, y: 0, z: 0}
 --- !u!65 &1507572370
 BoxCollider:
@@ -17038,7 +17109,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5108620758487978504, guid: 2ed57bb81319ac74482e7472350952f3, type: 3}
       propertyPath: m_RootOrder
-      value: 37
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 5108620758487978504, guid: 2ed57bb81319ac74482e7472350952f3, type: 3}
       propertyPath: m_LocalScale.x
@@ -19363,6 +19434,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: DungeonGate Variant (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5597595211391600818, guid: 2ed57bb81319ac74482e7472350952f3, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5597595211391600818, guid: 2ed57bb81319ac74482e7472350952f3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ed57bb81319ac74482e7472350952f3, type: 3}
 --- !u!4 &1756381100 stripped
@@ -20166,7 +20245,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5108620758487978504, guid: 2ed57bb81319ac74482e7472350952f3, type: 3}
       propertyPath: m_RootOrder
-      value: 40
+      value: 39
       objectReference: {fileID: 0}
     - target: {fileID: 5108620758487978504, guid: 2ed57bb81319ac74482e7472350952f3, type: 3}
       propertyPath: m_LocalScale.x
@@ -20375,31 +20454,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5720428136723152847, guid: 2e7704ee8306eed4187a31d6d8a87227, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.89039314
+      value: 0.9238797
       objectReference: {fileID: 0}
     - target: {fileID: 5720428136723152847, guid: 2e7704ee8306eed4187a31d6d8a87227, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.046353005
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5720428136723152847, guid: 2e7704ee8306eed4187a31d6d8a87227, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.43825302
+      value: -0.38268322
       objectReference: {fileID: 0}
     - target: {fileID: 5720428136723152847, guid: 2e7704ee8306eed4187a31d6d8a87227, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.113955095
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5720428136723152847, guid: 2e7704ee8306eed4187a31d6d8a87227, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -10.511
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5720428136723152847, guid: 2e7704ee8306eed4187a31d6d8a87227, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -51.537
+      value: -45
       objectReference: {fileID: 0}
     - target: {fileID: 5720428136723152847, guid: 2e7704ee8306eed4187a31d6d8a87227, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -9.501
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e7704ee8306eed4187a31d6d8a87227, type: 3}
@@ -21422,7 +21501,7 @@ GameObject:
   m_Name: Gound1 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &1979834679
@@ -23592,7 +23671,7 @@ GameObject:
   m_Name: Gound1 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &2132508104
@@ -23783,9 +23862,9 @@ Transform:
   - {fileID: 7686559338986736099}
   - {fileID: 1659427030}
   - {fileID: 125503544}
+  - {fileID: 37663670}
   - {fileID: 735209095}
   - {fileID: 913097321}
-  - {fileID: 37663670}
   - {fileID: 1286176544}
   - {fileID: 587733325}
   - {fileID: 85382744}
@@ -23799,8 +23878,8 @@ Transform:
   - {fileID: 658450361}
   - {fileID: 1518290561}
   - {fileID: 750297623}
-  - {fileID: 1756381100}
   - {fileID: 1507572369}
+  - {fileID: 1756381100}
   - {fileID: 1151651905}
   - {fileID: 787305314}
   - {fileID: 519347661}
@@ -23860,7 +23939,7 @@ GameObject:
   m_Name: Gound1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &5925995120370719462
@@ -23906,7 +23985,7 @@ GameObject:
   m_Name: CastleWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!23 &7537831426545525863
