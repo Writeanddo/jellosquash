@@ -18,13 +18,13 @@ public class UICinematic : MonoBehaviour
     Player.move = true;
     Cursor.visible = false;
     inGame = true;
-    menuCam.Priority = 9;
-    creditCam.Priority = 8;
+    menuCam.Priority = 8;
+    creditCam.Priority = 7;
   }
 
   public void PressCredit()
   {
-    creditCam.Priority = 20;
+    menuCam.Priority = 7;
   }
   public void CreditOn() => StartCoroutine(CreditActive());
   IEnumerator CreditActive()

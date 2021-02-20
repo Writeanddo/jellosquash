@@ -2673,7 +2673,7 @@ Transform:
   - {fileID: 1417895853}
   - {fileID: 1404339743}
   m_Father: {fileID: 1641411809}
-  m_RootOrder: 72
+  m_RootOrder: 54
   m_LocalEulerAnglesHint: {x: -8.323, y: -5.181, z: 0.911}
 --- !u!1001 &409623724
 PrefabInstance:
@@ -2682,6 +2682,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1901939712}
     m_Modifications:
+    - target: {fileID: 1921750662592336806, guid: 2e7704ee8306eed4187a31d6d8a87227, type: 3}
+      propertyPath: m_Radius
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 4911416983783220597, guid: 2e7704ee8306eed4187a31d6d8a87227, type: 3}
       propertyPath: m_Name
       value: Enemy Variant (5)
@@ -2748,7 +2752,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5945740317650983464, guid: 2e7704ee8306eed4187a31d6d8a87227, type: 3}
       propertyPath: m_Speed
-      value: 40
+      value: 35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e7704ee8306eed4187a31d6d8a87227, type: 3}
@@ -5749,6 +5753,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1901939712}
     m_Modifications:
+    - target: {fileID: 1921750662592336806, guid: 2e7704ee8306eed4187a31d6d8a87227, type: 3}
+      propertyPath: m_Radius
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 4911416983783220597, guid: 2e7704ee8306eed4187a31d6d8a87227, type: 3}
       propertyPath: m_Name
       value: Enemy Variant (6)
@@ -5815,7 +5823,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5945740317650983464, guid: 2e7704ee8306eed4187a31d6d8a87227, type: 3}
       propertyPath: m_Speed
-      value: 40
+      value: 35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e7704ee8306eed4187a31d6d8a87227, type: 3}
@@ -6529,6 +6537,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1901939712}
     m_Modifications:
+    - target: {fileID: 1921750662592336806, guid: 2e7704ee8306eed4187a31d6d8a87227, type: 3}
+      propertyPath: m_Radius
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 4911416983783220597, guid: 2e7704ee8306eed4187a31d6d8a87227, type: 3}
       propertyPath: m_Name
       value: Enemy Variant
@@ -6595,7 +6607,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5945740317650983464, guid: 2e7704ee8306eed4187a31d6d8a87227, type: 3}
       propertyPath: m_Speed
-      value: 40
+      value: 35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e7704ee8306eed4187a31d6d8a87227, type: 3}
@@ -9847,6 +9859,7 @@ Transform:
   - {fileID: 54129960}
   - {fileID: 467245067}
   - {fileID: 749701199}
+  - {fileID: 395684686}
   - {fileID: 1409777073}
   - {fileID: 148024915}
   - {fileID: 1855048992}
@@ -9865,7 +9878,6 @@ Transform:
   - {fileID: 1766763691}
   - {fileID: 1198308330}
   - {fileID: 25858157}
-  - {fileID: 395684686}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
