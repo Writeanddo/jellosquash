@@ -6,6 +6,7 @@ public class UICinematic : MonoBehaviour
   // main cam - 10
   public CinemachineVirtualCamera menuCam; //12
   public CinemachineVirtualCamera creditCam; //11
+  public CinemachineFreeLook playerCam;
   public GameObject menuPanel;
   KeyCode escape = KeyCode.Escape;
   public GameObject credit;
@@ -20,6 +21,7 @@ public class UICinematic : MonoBehaviour
     inGame = true;
     menuCam.Priority = 8;
     creditCam.Priority = 7;
+    playerCam.MoveToTopOfPrioritySubqueue();
   }
 
   public void PressCredit()

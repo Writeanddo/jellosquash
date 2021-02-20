@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2207.8408, g: 1405.1455, b: 1045.669, a: 1}
+  m_IndirectSpecularColor: {r: 2560.913, g: 1741.9062, b: 1487.9355, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -272,8 +272,8 @@ MonoBehaviour:
   - Level1
   - Level2
   - Level3
-  startScene: Level3
-  startSize: 4
+  startScene: Level1
+  startSize: 1
   spawnLocations:
   - {fileID: 585982646}
   - {fileID: 676079586}
@@ -349,9 +349,17 @@ PrefabInstance:
       propertyPath: menuPanel
       value: 
       objectReference: {fileID: 697021678}
+    - target: {fileID: 4075239648071498792, guid: fa91a7ef4d4d6824da4d6ff143235dab, type: 3}
+      propertyPath: playerCam
+      value: 
+      objectReference: {fileID: 1014788778}
     - target: {fileID: 4075239648071498793, guid: fa91a7ef4d4d6824da4d6ff143235dab, type: 3}
       propertyPath: m_Name
       value: CinemaCams
+      objectReference: {fileID: 0}
+    - target: {fileID: 4075239648071498793, guid: fa91a7ef4d4d6824da4d6ff143235dab, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4075239648071498795, guid: fa91a7ef4d4d6824da4d6ff143235dab, type: 3}
       propertyPath: m_RootOrder
@@ -1598,15 +1606,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3066604840088316976, guid: 40dc031698349574c917a31edfb1a559, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.08152644
+      value: -0.08152643
       objectReference: {fileID: 0}
     - target: {fileID: 3066604840088316976, guid: 40dc031698349574c917a31edfb1a559, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.22879237
+      value: 0.2287924
       objectReference: {fileID: 0}
     - target: {fileID: 3066604840088316976, guid: 40dc031698349574c917a31edfb1a559, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.12779857
+      value: -0.12779859
       objectReference: {fileID: 0}
     - target: {fileID: 3066604840151612644, guid: 40dc031698349574c917a31edfb1a559, type: 3}
       propertyPath: m_Name

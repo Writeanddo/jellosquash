@@ -35,12 +35,16 @@ public class FinalDoor : MonoBehaviour
   {
     if ((playerLayer & 1 << collider.gameObject.layer) == 1 << collider.gameObject.layer)
     {
-      if (collider.GetComponent<Player>().item != null)
+      Player player = collider.GetComponent<Player>();
+      if (player.item != null)
       {
-        for (int c=0; c < disableCollider.Length; c++)
-          disableCollider[c].enabled = false;
-        _animationTime = 0.0f;
-        SoundFX.source.PlayOneShot(rockMoving);
+        if (player.item.name == "WinKey")
+        {
+          for (int c=0; c < disableCollider.Length; c++)
+            disableCollider[c].enabled = false;
+          _animationTime = 0.0f;
+          SoundFX.source.PlayOneShot(rockMoving);
+        }
       }
     }
   }
