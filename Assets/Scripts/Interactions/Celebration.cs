@@ -4,10 +4,11 @@ using UnityEngine.VFX;
 public class Celebration : MonoBehaviour
 {
 	// Start is called before the first frame update
-	public GameObject fireWorksPerfab;
+  public Cinemachine.CinemachineVirtualCamera winCam;
+  public Cinemachine.CinemachineFreeLook playerCam;
 	public ParticleSystem TorchParticleLeft;
 	public ParticleSystem TorchParticleRight;
-	VisualEffect firework;
+	public VisualEffect firework;
 
 	[ColorUsage(false, true)]
   public Color unpressed;
@@ -28,7 +29,6 @@ public class Celebration : MonoBehaviour
     oriPos = transform.position;
 		colorProperty = Shader.PropertyToID("_PressurePlateColor");
 		finalPlate.SetColor(colorProperty, unpressed);
-		firework = Instantiate(fireWorksPerfab, spawn.position, transform.rotation).GetComponent<VisualEffect>();
 		TorchParticleLeft.Stop();
 		TorchParticleRight.Stop();
 		firework.Stop();
@@ -54,7 +54,7 @@ public class Celebration : MonoBehaviour
     transform.position = Vector3.Lerp(oriPos + Vector3.down, oriPos, lerpSpeed);
     finalPlate.SetColor(colorProperty, Color.Lerp(pressed, unpressed, lerpSpeed));
   }
-	void OnTriggerenter()
+	void OnTriggerEnter(Collider collider)
 	{
     down = true;
     if(down)
@@ -62,11 +62,15 @@ public class Celebration : MonoBehaviour
       moveDown();
       down = false;
     }
+    print("Play");
 		firework.Play();
 		TorchParticleLeft.Play();
 		TorchParticleRight.Play();
+
+    winCam.Priority = 15;
+    winCam.MoveToTopOfPrioritySubqueue();
 	}
-	void OnTriggerExit()
+	void OnTriggerExit(Collider collider)
 	{
     down = false;
     if(!down)
@@ -74,8 +78,11 @@ public class Celebration : MonoBehaviour
       moveUp();
       down = true;
     }
+    print("Stop");
 		firework.Stop();
 		TorchParticleLeft.Stop();
 		TorchParticleRight.Stop();
+    winCam.Priority = 6;
+    playerCam.MoveToTopOfPrioritySubqueue();
 	}
 }
