@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2556.1016, g: 1714.6836, b: 1439.9199, a: 1}
+  m_IndirectSpecularColor: {r: 2556.8613, g: 1720.8242, b: 1450.334, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -496,6 +496,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa91a7ef4d4d6824da4d6ff143235dab, type: 3}
+--- !u!1 &886240858 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -8391222552659086748, guid: 0eb306c8e4f5079408ed38fe051e3b94, type: 3}
+  m_PrefabInstance: {fileID: 1511594098}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &886240859 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -5477749408508380018, guid: 0eb306c8e4f5079408ed38fe051e3b94, type: 3}
+  m_PrefabInstance: {fileID: 1511594098}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &886240863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886240858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38f3183b65e8aee4c8a9cbad3d6c9b7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Door: {fileID: 886240859}
+  moveSpeed: 0.5
+  moveOut: 20
+  moveSideways: 40
+  rockMoving: {fileID: 8300000, guid: 24936c748ff891d4ea13801ee450eeb3, type: 3}
+  duration: 0
 --- !u!114 &1014788778 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3066604840151612645, guid: 40dc031698349574c917a31edfb1a559, type: 3}
@@ -708,6 +736,10 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 0eb306c8e4f5079408ed38fe051e3b94, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 0eb306c8e4f5079408ed38fe051e3b94, type: 3}
+      propertyPath: m_Name
+      value: FinalDoor
       objectReference: {fileID: 0}
     - target: {fileID: -4683669308469848369, guid: 0eb306c8e4f5079408ed38fe051e3b94, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1696,11 +1728,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3066604840088316976, guid: 40dc031698349574c917a31edfb1a559, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.19820441
+      value: 0.19820444
       objectReference: {fileID: 0}
     - target: {fileID: 3066604840088316976, guid: 40dc031698349574c917a31edfb1a559, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.11071214
+      value: -0.11071216
       objectReference: {fileID: 0}
     - target: {fileID: 3066604840151612644, guid: 40dc031698349574c917a31edfb1a559, type: 3}
       propertyPath: m_Name
