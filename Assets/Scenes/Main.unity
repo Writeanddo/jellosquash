@@ -140,16 +140,28 @@ PrefabInstance:
       value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 3306750073384689067, guid: 8e13dac2e91a45f4c8764f1ef2bb2116, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4.8261003
+      objectReference: {fileID: 0}
+    - target: {fileID: 3306750073384689067, guid: 8e13dac2e91a45f4c8764f1ef2bb2116, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 9.652201
+      objectReference: {fileID: 0}
+    - target: {fileID: 3306750073384689067, guid: 8e13dac2e91a45f4c8764f1ef2bb2116, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 4.8261003
+      objectReference: {fileID: 0}
+    - target: {fileID: 3306750073384689067, guid: 8e13dac2e91a45f4c8764f1ef2bb2116, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -144
+      value: -142.44
       objectReference: {fileID: 0}
     - target: {fileID: 3306750073384689067, guid: 8e13dac2e91a45f4c8764f1ef2bb2116, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -90.1875
+      value: -91.59
       objectReference: {fileID: 0}
     - target: {fileID: 3306750073384689067, guid: 8e13dac2e91a45f4c8764f1ef2bb2116, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -53.4375
+      value: -51.71
       objectReference: {fileID: 0}
     - target: {fileID: 3306750073384689067, guid: 8e13dac2e91a45f4c8764f1ef2bb2116, type: 3}
       propertyPath: m_LocalRotation.w
@@ -329,8 +341,8 @@ MonoBehaviour:
   - Level1
   - Level2
   - Level3
-  startScene: Level1
-  startSize: 1
+  startScene: Level3
+  startSize: 3
   spawnLocations:
   - {fileID: 585982646}
   - {fileID: 676079586}
