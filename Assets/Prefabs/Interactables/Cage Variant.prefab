@@ -74,6 +74,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   animationDuration: 1
   targetRotation: {x: 0, y: 0.70710677, z: 0, w: 0.70710677}
+  cageOpen: {fileID: 8300000, guid: 59cb16a7b4ad4d44f88f82abd2f353b8, type: 3}
 --- !u!65 &7800967860968113783
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -35,6 +35,7 @@ public class Enemy : MonoBehaviour
   private float _attackIntervalTime;
   private float _attackTime;
   private Vector3 _currentPosition;
+  public AudioClip squashed;
 
   void Start()
   {
@@ -87,6 +88,7 @@ public class Enemy : MonoBehaviour
       _animationTime = 0.0f;
       stats.SetActive(false);
       dead = true;
+      SoundFX.source.PlayOneShot(squashed);
     }
     if (_animationTime < squashedDuration)
     {

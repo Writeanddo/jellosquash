@@ -14,6 +14,7 @@ public class CageDoor : MonoBehaviour
   private bool _trigger = false;
   private float _animationTime;
   private Quaternion _localRotation;
+  public AudioClip cageOpen;
 
   void Start()
   {
@@ -29,7 +30,7 @@ public class CageDoor : MonoBehaviour
       if (_trigger) _animationTime += Time.deltaTime;
       else _animationTime -= Time.deltaTime;
       door.transform.localRotation = Quaternion.Lerp(_localRotation, targetRotation, evaluatedTime);
-
+      SoundFX.source.PlayOneShot(cageOpen);
     }
   }
 

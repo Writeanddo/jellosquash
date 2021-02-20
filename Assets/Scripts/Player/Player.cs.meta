@@ -3,7 +3,18 @@ guid: 70ac5c5f2a9919642a24083235fa46ad
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - status: {instanceID: 0}
+  - controller: {instanceID: 0}
+  - cameraTransform: {instanceID: 0}
+  - squashVFXPrefab: {instanceID: 0}
+  - jellyPrefab: {instanceID: 0}
+  - smash: {fileID: 8300000, guid: 951653da4b27ded46b8725746bd157d2, type: 3}
+  - jump: {fileID: 8300000, guid: 577ebaae356c8e6428c9f1f3ae0566a8, type: 3}
+  - takenDamage: {fileID: 8300000, guid: 9a7c0e49a702a9c41809d1615bae65fb, type: 3}
+  - pickup: {fileID: 8300000, guid: 8373e5ea79e867848a14f087d3e854ac, type: 3}
+  - gainMass: {fileID: 8300000, guid: 46edf776f1a0e244aa3c0dd187887e27, type: 3}
+  - item: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
