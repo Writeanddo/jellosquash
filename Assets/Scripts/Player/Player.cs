@@ -28,7 +28,18 @@ public partial class Player : MonoBehaviour
   void Update()
   {
     if (move)
+    {
       MovementUpdate();
+      if (Input.GetKeyDown(KeyCode.R))
+      {
+        gameManager.RepositionPlayer();
+        dead = false;
+        _velocity = Vector3.zero;
+        status.text = "";
+        SceneManager.UnloadSceneAsync(GameManager.currScene, UnloadSceneOptions.UnloadAllEmbeddedSceneObjects);
+        SceneManager.LoadSceneAsync(GameManager.currScene, LoadSceneMode.Additive);
+      }
+    }
     SizeUpdate();
 
     cinemachineFreeLook.m_Orbits[0].m_Radius = defaultRadius[0] + transform.localScale.x;
@@ -49,18 +60,6 @@ public partial class Player : MonoBehaviour
     // {
     //   status.text = "Victory! Press esc to quit the game."
     // }
-
-    if (move)
-    {
-      if (Input.GetKeyDown(KeyCode.R))
-      {
-        gameManager.RepositionPlayer();
-        dead = false;
-        status.text = "";
-        SceneManager.UnloadSceneAsync(GameManager.currScene, UnloadSceneOptions.UnloadAllEmbeddedSceneObjects);
-        SceneManager.LoadSceneAsync(GameManager.currScene, LoadSceneMode.Additive);
-      }
-    }
   }
 
   public void RuptureDropJelly(int totalMassLossCount)
