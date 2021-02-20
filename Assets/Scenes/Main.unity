@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2563.3809, g: 1742.9551, b: 1487.5918, a: 1}
+  m_IndirectSpecularColor: {r: 824.33984, g: 884.74536, b: 1004.35156, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -600,6 +600,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 781299181, guid: 6e2fe49231d4f724e9a6631b5574272a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 219
+      objectReference: {fileID: 0}
     - target: {fileID: 1337616857, guid: 6e2fe49231d4f724e9a6631b5574272a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 3
@@ -865,6 +869,10 @@ PrefabInstance:
     - target: {fileID: 7918966510674456089, guid: 6e2fe49231d4f724e9a6631b5574272a, type: 3}
       propertyPath: m_Name
       value: MenuCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 7918966511010852784, guid: 6e2fe49231d4f724e9a6631b5574272a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7918966511583829777, guid: 6e2fe49231d4f724e9a6631b5574272a, type: 3}
       propertyPath: m_IsActive
