@@ -34,6 +34,7 @@ public partial class Player : MonoBehaviour
       {
         gameManager.RepositionPlayer();
         dead = false;
+        _itemExists = false;
         _velocity = Vector3.zero;
         status.text = "";
         SceneManager.UnloadSceneAsync(GameManager.currScene, UnloadSceneOptions.UnloadAllEmbeddedSceneObjects);

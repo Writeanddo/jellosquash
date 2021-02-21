@@ -11,13 +11,15 @@ public class FinalDoor : MonoBehaviour
   public float duration;
   public AnimationCurve curve;
 
-  public float _animationTime;
+  private float _animationTime;
+  private bool _opened = false;
   private Vector3 _position;
 
   void Start()
   {
     _animationTime = duration;
     _position = transform.position;
+    _opened = false;
   }
 
   void Update()
@@ -38,12 +40,13 @@ public class FinalDoor : MonoBehaviour
       Player player = collider.GetComponent<Player>();
       if (player.item != null)
       {
-        if (player.item.name == "WinKey")
+        if (player.item.name == "WinKey" && !_opened)
         {
           for (int c=0; c < disableCollider.Length; c++)
             disableCollider[c].enabled = false;
           _animationTime = 0.0f;
           SoundFX.source.PlayOneShot(rockMoving);
+          _opened = true;
         }
       }
     }

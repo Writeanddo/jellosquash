@@ -35,10 +35,7 @@ public class UICinematic : MonoBehaviour
     credit.SetActive(true);
   }
 
-  public void BackButton()
-  {
-    StartCoroutine(QuitGame());
-  }
+  public void BackButton() => StartCoroutine(QuitGame());
   public IEnumerator QuitGame() // escape
   {
     credit.SetActive(false);

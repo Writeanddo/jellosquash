@@ -49,6 +49,7 @@ public partial class Player : MonoBehaviour
     {
       if (collider.isTrigger == true)
       {
+        if (collider.name == "DestroyKey") DestroyItem();
         _localScale += collider.transform.localScale;
         _animationTime = 0.0f;
         StartCoroutine(DestroyJelly(collider.gameObject));
@@ -92,8 +93,8 @@ public partial class Player : MonoBehaviour
   {
     jelly.transform.position += jelly.transform.up*500.0f;
     yield return new WaitForSeconds(0.1f);
-    jelly.SetActive(false);
+    jelly?.SetActive(false);
     yield return new WaitForSeconds(1);
-    Destroy(jelly);
+    if (jelly != null) Destroy(jelly);
   }
 }
