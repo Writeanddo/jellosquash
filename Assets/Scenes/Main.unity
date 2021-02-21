@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2558.9082, g: 1725.0898, b: 1456.8691, a: 1}
+  m_IndirectSpecularColor: {r: 2564.4336, g: 1742.9121, b: 1486.8867, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5379,7 +5379,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4075239648239516530, guid: fa91a7ef4d4d6824da4d6ff143235dab, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -43.946648
+      value: -28.946648
       objectReference: {fileID: 0}
     - target: {fileID: 4075239648239516530, guid: fa91a7ef4d4d6824da4d6ff143235dab, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5416,6 +5416,10 @@ PrefabInstance:
     - target: {fileID: 4075239648239516530, guid: fa91a7ef4d4d6824da4d6ff143235dab, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4075239648423397433, guid: fa91a7ef4d4d6824da4d6ff143235dab, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 61.053352
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa91a7ef4d4d6824da4d6ff143235dab, type: 3}
@@ -6266,7 +6270,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1918817309}
   m_LocalRotation: {x: 0, y: -0.38268343, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: 89.94665, y: 130.6, z: -159.41553}
+  m_LocalPosition: {x: 96, y: 130.6, z: -159.41553}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -11756,6 +11760,7 @@ MonoBehaviour:
   firework: {fileID: 1367968050}
   unpressed: {r: 15.937255, g: 10.179817, b: 0, a: 0}
   pressed: {r: 0, g: 15.999998, b: 13.31937, a: 0}
+  sunlightController: {fileID: 2035111236}
   finalPlate: {fileID: 2100000, guid: f8f5451bddb492940b5170729a141d87, type: 2}
   spawn: {fileID: 1171766048}
   pressurePlate: {fileID: 8300000, guid: 0a6c8f7ea30ef764ba37e4e8ef8b489d, type: 3}
@@ -11785,6 +11790,10 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  copyOfRotations:
+  - {x: 21.577, y: 174.347, z: 16.778}
+  - {x: 21.577, y: 0, z: 16.778}
+  - {x: 21.577, y: 84.347, z: 16.778}
 --- !u!1 &4640823276850314872
 GameObject:
   m_ObjectHideFlags: 0

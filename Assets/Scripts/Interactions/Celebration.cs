@@ -15,6 +15,8 @@ public class Celebration : MonoBehaviour
   [ColorUsage(false, true)]
   public Color pressed;
 
+  public SunlightController sunlightController;
+
   public Material finalPlate;
   public Transform spawn;
   public AudioClip pressurePlate;
@@ -26,6 +28,8 @@ public class Celebration : MonoBehaviour
   private Vector3 _originalPos;
   private bool _trigger = false;
   private int colorProperty;
+
+  public Vector3[] copyOfRotations;
 
   void Start()
   {
@@ -64,6 +68,8 @@ public class Celebration : MonoBehaviour
 
     SoundFX.source.PlayOneShot(torchAudio);
     SoundFX.source.PlayOneShot(pressurePlate);
+
+    sunlightController.targetRotations[2] = copyOfRotations[0];
   }
 
   void OnTriggerExit(Collider collider)
@@ -75,5 +81,7 @@ public class Celebration : MonoBehaviour
 
     winCam.Priority = 6;
     playerCam.MoveToTopOfPrioritySubqueue();
+    
+    sunlightController.targetRotations[2] = copyOfRotations[2];
   }
 }
