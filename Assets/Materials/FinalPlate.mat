@@ -82,7 +82,7 @@ Material:
     - _Color: {r: 4, g: 0, b: 0, a: 1}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
-    - _PressurePlateColor: {r: 15.937255, g: 10.179817, b: 0, a: 0}
+    - _PressurePlateColor: {r: 0.010601268, g: 15.996126, b: 13.310511, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &990165439265456141
 MonoBehaviour:
